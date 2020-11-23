@@ -12,7 +12,7 @@ public class CreateTask {
             Scanner n1=new Scanner(System.in);
             n=n1.nextInt();
             if (n==2){
-            System.out.println("вивчаємо нові слова");
+            System.out.println("вивчаємо нові слов");
         }else {
                 break;
             }
