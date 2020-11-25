@@ -27,11 +27,12 @@ public class Navigation {
                 switch (str) {
                     case "2":
 
-                        CreateTask createTask = new CreateTask();
+//                        CreateTask createTask = new CreateTask();
                         new CreateTask().CreateTask();
                         break;
                     case "3":
-                        out.println("test me");;
+//                        TestMe testMe = new TestMe();
+                       new TestMe().TestMe();
                         break;
                     case "4":
                         out.println("leaderboard");

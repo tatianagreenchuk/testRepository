@@ -26,7 +26,7 @@ public class TestMe {
                     break;
             }
         }
-        Navigation navigation = new Navigation();
+//        Navigation navigation = new Navigation();
         new Navigation().Navigatia();
     }
 }
