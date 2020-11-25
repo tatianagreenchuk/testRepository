@@ -31,7 +31,7 @@ public class Main {
             if (account.equals("2")) {
                loG.login();
             }else {
-                break;
+                System.exit(0);
             }
         }
     }

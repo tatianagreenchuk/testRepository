@@ -7,7 +7,7 @@ public class CreateTask {
         сreateTask();
     }
 
-    private static void сreateTask() {
+    public static void сreateTask() {
         int nz =2;
         int n;
         System.out.println("1+Enter - вийти з програми");
@@ -18,7 +18,8 @@ public class CreateTask {
             if (n==2){
             System.out.println("вивчаємо нові слов");
         }else {
-                break;
+                Main bacK =new Main();
+                bacK.open();
             }
         }
     }
