@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class CreateTask {
     public static void main(String[] args) {
+        сreateTask();
+    }
+
+    private static void сreateTask() {
         int nz =2;
         int n;
         System.out.println("1+Enter - вийти з програми");
