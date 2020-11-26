@@ -70,6 +70,7 @@ public class Registration {
                     System.out.println(RegMenu.CONGRAT.menuName);
                     stayInMenu = false;
                     stayInSubMenu = false;
+                    Navigation.navigation();
                     break;
                 case "2":
                     System.out.println();
