@@ -25,7 +25,7 @@ public class Main {
             Scanner scan = new Scanner(System.in);
             String account = scan.nextLine();
             if (account.equals("1")) {
-                System.out.println("Зареєструватися");
+                Registration.registration();
                 break;
             }
             if (account.equals("2")) {
