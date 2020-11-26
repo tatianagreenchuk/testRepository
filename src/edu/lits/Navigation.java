@@ -27,7 +27,8 @@ public class Navigation {
             while (!str.equals("1")) {
                 switch (str) {
                     case "2":
-                        out.println("create task");
+                        CreateTask crt = new CreateTask();
+                        crt.сreateTask();
 
                         break;
                     case "3":

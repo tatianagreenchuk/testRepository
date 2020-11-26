@@ -12,16 +12,16 @@ public class CreateTask {
         int n;
         System.out.println("1+Enter - вийти з програми");
         System.out.println("2+Enter - вивчати нові слова");
-        while (nz!=1){
-            Scanner n1=new Scanner(System.in);
-            n=n1.nextInt();
+        Scanner n1=new Scanner(System.in);
+        n=n1.nextInt();
+        while (n!=1){
+
             if (n==2){
             System.out.println("вивчаємо нові слов");
         }else {
-                Main bacK =new Main();
-                bacK.open();
+                Navigation nav =new Navigation();
+                nav.navigation();
             }
         }
     }
-
 }
