@@ -7,14 +7,15 @@ import java.util.Scanner;
 import static java.lang.System.*;
 
 public class Navigation {
-    public Navigation() {
-    }
 
-    public void Navigatia() {
+
+    public static void main(String[] args) {
+
         navigation();
     }
 
-    private static void navigation() {
+
+    static void navigation() {
 
 
         {
@@ -26,16 +27,17 @@ public class Navigation {
             while (!str.equals("1")) {
                 switch (str) {
                     case "2":
+                        out.println("create task");
 
-//                        CreateTask createTask = new CreateTask();
-                        new CreateTask().CreateTask();
                         break;
                     case "3":
-//                        TestMe testMe = new TestMe();
-                       new TestMe().TestMe();
+                        TestMe tm = new TestMe();
+                        tm.TestMe();
+
                         break;
                     case "4":
-                        out.println("leaderboard");
+                        LeaderBoard lb = new LeaderBoard();
+                        lb.LeaderBoard();
                         break;
                     default:
                         System.out.println("Please, choose an option from 1 to 4");
@@ -43,7 +45,8 @@ public class Navigation {
                 }
                 str = sc.nextLine();
             }
-            out.println("go back");
+            Main bacK = new Main();
+            bacK.open();
         }
     }
 
