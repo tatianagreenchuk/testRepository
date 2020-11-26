@@ -8,21 +8,22 @@ public class CreateTask {
     }
 
     public static void сreateTask() {
-        int nz =2;
+        int nz = 2;
         int n;
         System.out.println("1+Enter - вийти з програми");
         System.out.println("2+Enter - вивчати нові слова");
-        Scanner n1=new Scanner(System.in);
-        n=n1.nextInt();
-        while (n!=1){
-            n=n1.nextInt();
+        Scanner n1 = new Scanner(System.in);
+        n = n1.nextInt();
+        while (n != 1) {
+            n = n1.nextInt();
 
-            if (n==2){
-            System.out.println("вивчаємо нові слов");
-        }else {
-                Navigation nav =new Navigation();
-                nav.navigation();
+            if (n == 2) {
+                System.out.println("вивчаємо нові слов");
+
+
             }
-        }
+
+        }Navigation nav = new Navigation();
+        nav.navigation();
     }
 }
