@@ -4,11 +4,10 @@ import java.util.Scanner;
 
 public class CreateTask {
     public static void main(String[] args) {
-        сreateTask();
+        createTask();
     }
 
-    public static void сreateTask() {
-        int nz = 2;
+    public static void createTask() {
         int n;
         System.out.println("1+Enter - вийти з програми");
         System.out.println("2+Enter - вивчати нові слова");
@@ -22,8 +21,9 @@ public class CreateTask {
 
 
             }
-
-        }Navigation nav = new Navigation();
-        nav.navigation();
+        }
+        System.out.println("Welcome! Please choose what you are looking for:\n" +
+                "1) ..Go Back..      2) ..Create Task..  " +
+                "    3) ..Test Me..    4) ..Leaderboard..");
     }
 }

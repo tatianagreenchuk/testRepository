@@ -25,7 +25,10 @@ public class TestMe {
                     System.out.println("Please, choose an option from 1 to 4");
                     break;
             }
-        }Navigation nav =new Navigation();
-        nav.navigation();
+            str=sc.nextLine();
+        }
+        System.out.println("Welcome! Please choose what you are looking for:\n" +
+                "1) ..Go Back..      2) ..Create Task..  " +
+                "    3) ..Test Me..    4) ..Leaderboard..");
     }
 }

@@ -33,7 +33,9 @@ public class LeaderBoard {
 
         }
         menuOption = sc.nextLine();
-        Navigating.navigating();
+        System.out.println("Welcome! Please choose what you are looking for:\n" +
+                "1) ..Go Back..      2) ..Create Task..  " +
+                "    3) ..Test Me..    4) ..Leaderboard..");
     }
 }
 
