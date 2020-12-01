@@ -20,7 +20,7 @@ public class Navigation {
 
         {
             System.out.println("Welcome! Please choose what you are looking for:\n" +
-                    "1) ..Go Back..      2) ..Create Task..  " +
+                     "1) ..Go Back..      2) ..Create Task..  " +
                     "    3) ..Test Me..    4) ..Leaderboard..");
             Scanner sc = new Scanner(System.in);
             String str = sc.nextLine();
