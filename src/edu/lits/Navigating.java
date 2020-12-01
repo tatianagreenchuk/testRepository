@@ -1,34 +1,30 @@
 package edu.lits;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
 
-import static java.lang.System.*;
-
-public class Navigation {
+public class Navigating {
 
 
     public static void main(String[] args) {
 
-        navigation();
+        navigating();
     }
 
 
-    static void navigation() {
+    static void navigating() {
 
 
         {
             System.out.println("Welcome! Please choose what you are looking for:\n" +
                      "1) ..Go Back..      2) ..Create Task..  " +
                     "    3) ..Test Me..    4) ..Leaderboard..");
-            Scanner sc = new Scanner(System.in);
-            String str = sc.nextLine();
-            while (!str.equals("1")) {
-                switch (str) {
+            Scanner scan = new Scanner(System.in);
+            String line = scan.nextLine();
+            while (!line.equals("1")) {
+                switch (line) {
                     case "2":
                         CreateTask crt = new CreateTask();
-                        crt.сreateTask();
+                        crt.createTask();
 
                         break;
                     case "3":
@@ -44,10 +40,9 @@ public class Navigation {
                         System.out.println("Please, choose an option from 1 to 4");
                         break;
                 }
-                str = sc.nextLine();
+                line = scan.nextLine();
             }
-            Main bacK = new Main();
-            bacK.open();
+
         }
     }
 
