@@ -30,7 +30,7 @@ public class Login {
                     case "ttttt":
                         System.out.println("Вітаємо, ви увійшли в свій аккаунт!");
                         System.out.println();
-                        Navigation.navigation();
+                        Navigating.navigating();
                     default:
                         System.out.println("Виникла помилка, спробуйте ще раз");
                 }
