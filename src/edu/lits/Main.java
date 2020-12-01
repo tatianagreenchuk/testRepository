@@ -1,5 +1,9 @@
 package edu.lits;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Main {
@@ -31,6 +35,16 @@ public class Main {
             if (account.equals("2")) {
                loG.login();
             }else {
+                String name="nameUser";
+                File work=new File(name+".txt");
+                try {
+                    PrintWriter works=new PrintWriter(new BufferedWriter(new FileWriter(work,true)));
+                    works.println("сюди якось запихнемо наш масивчик :-) ");
+                    works.flush();
+                    works.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 System.exit(0);
             }
         }
