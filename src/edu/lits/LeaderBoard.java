@@ -7,12 +7,9 @@ public class LeaderBoard {
     public static void main(String[] args) {
         leaderboard();
     }
+    
 
-    public void LeaderBoard() {
-        leaderboard();
-    }
-
-    private static void leaderboard() {
+     static void leaderboard() {
 
 
         System.out.println("Welcome to the leaderboard!\n" +
@@ -37,6 +34,7 @@ public class LeaderBoard {
                 "1) ..Go Back..      2) ..Create Task..  " +
                 "    3) ..Test Me..    4) ..Leaderboard..");
     }
+
 }
 
 

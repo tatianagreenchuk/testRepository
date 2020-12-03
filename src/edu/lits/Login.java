@@ -1,5 +1,6 @@
 package edu.lits;
 
+import java.util.Map;
 import java.util.Scanner;
 
 public class Login {
@@ -21,24 +22,28 @@ public class Login {
                 String login = scan.nextLine();
                 System.out.println("Введіть свій пароль: ");
                 String password = scan.nextLine();
-                String[] pass = new String[]{"aaaaa", "sssss", "ddddd", "fffff", "ttttt"};
-                switch (password) {
-                    case "aaaaa":
-                    case "sssss":
-                    case "ddddd":
-                    case "fffff":
-                    case "ttttt":
+                // String[] pass = new String[]{"aaaaa", "sssss", "ddddd", "fffff", "ttttt"};
+                for (Map.Entry<String, String> ad : Registration.accountData.entrySet()) {
+                    if (ad.getKey().equals(login) && ad.getValue().equals(password)) {
+
+//                    switch (password) {
+//                        case "aaaaa":
+//                        case "sssss":
+//                        case "ddddd":
+//                        case "fffff":
+//                        case "ttttt":
                         System.out.println("Вітаємо, ви увійшли в свій аккаунт!");
                         System.out.println();
                         Navigating.navigating();
-                    default:
-                        System.out.println("Виникла помилка, спробуйте ще раз");
+                    }else{
+                            System.out.println("Виникла помилка, спробуйте ще раз");
+                    }
                 }
             }
-        }
-        Main bacK = new Main();
-        bacK.open();
+            Main bacK = new Main();
+            bacK.open();
 
+        }
     }
 }
 
