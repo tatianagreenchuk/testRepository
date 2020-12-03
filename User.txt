@@ -1,0 +1,10 @@
+1.markopyrizhok.33333.10.9.3;
+2.vovanchikchig.11111.8.9.0;
+3.serhiikond.22222.8.9.1;
+4.nazar.44444.5.5.5;
+5.tatianagreenchuk.55555.5.0.1;
+6.ivanivanovich.66666.1.0.0;
+7.vasilii.77777.5.4.2;
+8.mashamasha.88888.0.0.0;
+9.lenapolii.99999.2.1.0;
+10.gennadii.00000.6.7.8;
