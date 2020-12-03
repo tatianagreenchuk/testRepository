@@ -24,7 +24,7 @@ public class Main {
             Scanner scan = new Scanner(System.in);
             String account = scan.nextLine();
             if (account.equals("1")) {
-                Registration.runRegistration();
+                Registration.createAccount();
                 break;
             }
             if (account.equals("2")) {
