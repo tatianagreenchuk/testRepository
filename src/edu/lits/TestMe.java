@@ -3,13 +3,14 @@ package edu.lits;
 import java.util.Scanner;
 
 public class TestMe {
+    public TestMe() {
+    }
 
-
-    public static void main(String[] args) {
+    public void TestMe() {
         testMe();
     }
 
-    static void testMe() {
+    private static void testMe() {
         System.out.println("Welcome to the Test Me menu!\n" +
                 "Please choose what you are looking for:\n" +
                 "1) ..Go Back..         2) ..Take a Test..");

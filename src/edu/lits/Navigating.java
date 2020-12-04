@@ -23,13 +23,18 @@ public class Navigating {
             while (!line.equals("1")) {
                 switch (line) {
                     case "2":
-                        CreateTask.createTask();
+                        CreateTask crt = new CreateTask();
+                        crt.createTask();
+
                         break;
                     case "3":
-                        TestMe.testMe();
+                        TestMe tm = new TestMe();
+                        tm.TestMe();
+
                         break;
                     case "4":
-                        LeaderBoard.leaderboard();
+                        LeaderBoard lb = new LeaderBoard();
+                        lb.LeaderBoard();
                         break;
                     default:
                         System.out.println("Please, choose an option from 1 to 4");
@@ -37,7 +42,6 @@ public class Navigating {
                 }
                 line = scan.nextLine();
             }
-            Main.open();
 
         }
     }
