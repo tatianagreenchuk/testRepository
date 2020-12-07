@@ -2,13 +2,13 @@ package edu.lits;
 
 import java.util.Scanner;
 
-public class Navigating {
+public class Navigation {
 
     public static void main(String[] args) {
-        navigating();
+        startNavigation();
     }
 
-    static void navigating() {
+    static void startNavigation() {
         String line = "";
         while (!"4".equals(line)) {
             System.out.println();
@@ -22,16 +22,16 @@ public class Navigating {
             line = scan.nextLine();
             switch (line) {
                 case "1":
-                    CreateTask crt = new CreateTask();
-                    crt.createTask();
+                    NewTask crt = new NewTask();
+                    crt.createNewTask();
                     break;
                 case "2":
-                    TestMe tm = new TestMe();
-                    tm.testMe();
+                    Testing tm = new Testing();
+                    tm.startTesting();
                     break;
                 case "3":
                     LeaderBoard lb = new LeaderBoard();
-                    lb.leaderBoard();
+                    lb.showLeaderBoard();
                     break;
                 case "4":
                     break;

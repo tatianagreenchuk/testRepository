@@ -2,12 +2,12 @@ package edu.lits;
 
 import java.util.Scanner;
 
-public class CreateTask {
+public class NewTask {
     public static void main(String[] args) {
-        createTask();
+        createNewTask();
     }
 
-    public static void createTask() {
+    public static void createNewTask() {
         String menu = "";
         while (!"2".equals(menu)) {
             System.out.println();

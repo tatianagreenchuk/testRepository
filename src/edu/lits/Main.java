@@ -6,10 +6,10 @@ public class Main {
 
 
     public static void main(String[] args) {
-        open();
+        start();
     }
 
-       public static void open() {
+       public static void start() {
         String menu = "";
         while (!"3".equals(menu)) {
             System.out.println();
@@ -26,7 +26,7 @@ public class Main {
             }
             if ("2".equals(account)) {
                 Login loG = new Login();
-                loG.login();
+                loG.startLogin();
             }
             if ("3".equals(account)) {
                 menu = "3";

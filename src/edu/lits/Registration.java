@@ -43,7 +43,6 @@ public class Registration {
                     String password = textInput.nextLine();
                     System.out.print(REPEAT);
                     String passwordRepeat = textInput.nextLine();
-                    System.out.println();
             }
         }
     }

@@ -2,9 +2,9 @@ package edu.lits;
 
 import java.util.Scanner;
 
-public class TestMe {
+public class Testing {
 
-    static void testMe() {
+    static void startTesting() {
         String menu = "";
         while (!"2".equals(menu)) {
             System.out.println();

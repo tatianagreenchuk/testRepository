@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Login {
     public static void main(String[] args) {
-        login();
+        startLogin();
     }
 
-    public static void login() {
+    public static void startLogin() {
         String menu = "";
         while (!"2".equals(menu)) {
             System.out.println();
@@ -31,8 +31,8 @@ public class Login {
                     case "ttttt":
                         System.out.println();
                         System.out.println("Вітаємо, ви увійшли в свій аккаунт!");
-                        Navigating navigating = new Navigating();
-                        navigating.navigating();
+                        Navigation navigating = new Navigation();
+                        navigating.startNavigation();
                         menu = "2";
                         break;
                     default:

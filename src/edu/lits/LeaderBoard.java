@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class LeaderBoard {
 
-    static void leaderBoard() {
+    static void showLeaderBoard() {
         LeadMen menu = null;
         while (menu != LeadMen.BACK) {
             System.out.println();
