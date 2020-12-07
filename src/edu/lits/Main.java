@@ -14,23 +14,29 @@ public class Main {
     }
 
        public static void open() {
-        Login loG=new Login();
-        String menu = "0";
-        while (menu.equals("0")) {
+        String menu = "";
+        while (!"3".equals(menu)) {
             System.out.println();
-            System.out.println("1.Новачок");
-            System.out.println("2.Вже є свій аккаунт");
-            System.out.println("3.Завершити");
+            System.out.println("< Авторизація >");
+            System.out.println("1 - Створити новий обліковий запис");
+            System.out.println("2 - Увійти");
+            System.out.println("3 - Завершити роботиу");
+            System.out.print("виберіть опцію: ");
             Scanner scan = new Scanner(System.in);
             String account = scan.nextLine();
-            if (account.equals("1")) {
-                Registration.createAccount();
-                break;
+            if ("1".equals(account)) {
+                Registration registration = new Registration();
+                registration.createAccount();
             }
-            if (account.equals("2")) {
-               loG.login();
-            }else {
-                String name="nameUser";
+            if ("2".equals(account)) {
+                Login loG = new Login();
+                loG.login();
+            }
+            if ("3".equals(account)) {
+                menu = "3";
+            }
+
+                /*String name="nameUser";
                 File work=new File(name+".txt");
                 try {
                     PrintWriter works=new PrintWriter(new BufferedWriter(new FileWriter(work,true)));
@@ -40,8 +46,7 @@ public class Main {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                System.exit(0);
-            }
+                System.exit(0);*/
         }
     }
 }

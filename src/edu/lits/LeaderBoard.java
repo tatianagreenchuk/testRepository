@@ -1,41 +1,34 @@
 package edu.lits;
 
-import javax.naming.ldap.StartTlsRequest;
 import java.util.Scanner;
 
 public class LeaderBoard {
-    public static void main(String[] args) {
-        leaderboard();
-    }
 
-    public void LeaderBoard() {
-        leaderboard();
-    }
+    static void leaderBoard() {
+        LeadMen1 menu = null;
+        while (menu != LeadMen1.BACK) {
+            System.out.println();
+            System.out.println("1 - Показати дошку лідерів");
+            System.out.println("2 - Повернутися до головного меню");
+            System.out.print("виберіть опцію: ");
+            Scanner sc = new Scanner(System.in);
+            String menuOption = sc.nextLine();
 
-    private static void leaderboard() {
-
-
-        System.out.println("Welcome to the leaderboard!\n" +
-                "Please, choose an option 1 or 2\n" +
-                "1) ..Go Back..      2) ..View Leaderboard.. ");
-        Scanner sc = new Scanner(System.in);
-        String menuOption = sc.nextLine();
-        LeadMen1 menu = LeadMen1.BACK;
-        for (LeadMen1 i : LeadMen1.values()) {
-            if (menuOption.equals(i.menuNumber)) {
-                menu = i;
+            for (LeadMen1 i : LeadMen1.values()) {
+                if (menuOption.equals(i.menuNumber)) {
+                    menu = i;
+                }
+            }
+            switch (menu) {
+                case START:
+                    System.out.println("виводимо дошку лідерів");
+                    break;
+                case BACK:
+                    break;
+                default:
+                    System.out.println("Please, choose an option from 1 to 2");
             }
         }
-        switch (menu) {
-            case START:
-                System.out.println("LeaderBoard");
-                break;
-
-        }
-        menuOption = sc.nextLine();
-        System.out.println("Welcome! Please choose what you are looking for:\n" +
-                "1) ..Go Back..      2) ..Create Task..  " +
-                "    3) ..Test Me..    4) ..Leaderboard..");
     }
 }
 

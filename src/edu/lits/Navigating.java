@@ -4,46 +4,41 @@ import java.util.Scanner;
 
 public class Navigating {
 
-
     public static void main(String[] args) {
-
         navigating();
     }
 
-
     static void navigating() {
-
-
-        {
-            System.out.println("Welcome! Please choose what you are looking for:\n" +
-                     "1) ..Go Back..      2) ..Create Task..  " +
-                    "    3) ..Test Me..    4) ..Leaderboard..");
+        String line = "";
+        while (!"4".equals(line)) {
+            System.out.println();
+            System.out.println("< Головне меню >");
+            System.out.println("1 - Створити нове завдання");
+            System.out.println("2 - Пройти тестування");
+            System.out.println("3 - Показати дошку лідерів");
+            System.out.println("4 - Повернутися до меню Авторизації");
+            System.out.print("виберіть опцію: ");
             Scanner scan = new Scanner(System.in);
-            String line = scan.nextLine();
-            while (!line.equals("1")) {
-                switch (line) {
-                    case "2":
-                        CreateTask crt = new CreateTask();
-                        crt.createTask();
-
-                        break;
-                    case "3":
-                        TestMe tm = new TestMe();
-                        tm.TestMe();
-
-                        break;
-                    case "4":
-                        LeaderBoard lb = new LeaderBoard();
-                        lb.LeaderBoard();
-                        break;
-                    default:
-                        System.out.println("Please, choose an option from 1 to 4");
-                        break;
-                }
-                line = scan.nextLine();
+            line = scan.nextLine();
+            switch (line) {
+                case "1":
+                    CreateTask crt = new CreateTask();
+                    crt.createTask();
+                    break;
+                case "2":
+                    TestMe tm = new TestMe();
+                    tm.testMe();
+                    break;
+                case "3":
+                    LeaderBoard lb = new LeaderBoard();
+                    lb.leaderBoard();
+                    break;
+                case "4":
+                    break;
+                default:
+                    System.out.println("Please, choose an option from 1 to 4");
+                    break;
             }
-
         }
     }
-
 }

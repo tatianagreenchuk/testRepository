@@ -44,8 +44,6 @@ public class Registration {
                     System.out.print(REPEAT);
                     String passwordRepeat = textInput.nextLine();
                     System.out.println();
-                    Navigating.navigating();
-                    stayInMenu = false;
             }
         }
     }
