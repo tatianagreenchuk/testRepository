@@ -15,7 +15,8 @@ public class TestMe {
             menu = sc.nextLine();
                 switch (menu) {
                     case "1":
-                        System.out.println("the test...");
+                        System.out.println();
+                        System.out.println("запускаємо тестування ...");
                         break;
                     case "2":
                         break;

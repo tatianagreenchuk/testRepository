@@ -10,12 +10,14 @@ public class Login {
     public static void login() {
         String menu = "";
         while (!"2".equals(menu)) {
+            System.out.println();
             System.out.println("1 - Увійти в свій обліковий запис");
             System.out.println("2 - Повернутися до меню Авторизації");
             System.out.print("виберіть опцію: ");
             Scanner scan = new Scanner(System.in);
             menu = scan.nextLine();
             if ("1".equals(menu)) {
+                System.out.println();
                 System.out.println("Введіть свій логін: ");
                 String login = scan.nextLine();
                 System.out.println("Введіть свій пароль: ");
@@ -27,8 +29,8 @@ public class Login {
                     case "ddddd":
                     case "fffff":
                     case "ttttt":
-                        System.out.println("Вітаємо, ви увійшли в свій аккаунт!");
                         System.out.println();
+                        System.out.println("Вітаємо, ви увійшли в свій аккаунт!");
                         Navigating navigating = new Navigating();
                         navigating.navigating();
                         menu = "2";

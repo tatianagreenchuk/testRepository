@@ -17,6 +17,7 @@ public class CreateTask {
             Scanner n1 = new Scanner(System.in);
             menu = n1.nextLine();
             if ("1".equals(menu)) {
+                System.out.println();
                 System.out.println("створюємо завдання ...");
             }
         }

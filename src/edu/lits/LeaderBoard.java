@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class LeaderBoard {
 
     static void leaderBoard() {
-        LeadMen1 menu = null;
-        while (menu != LeadMen1.BACK) {
+        LeadMen menu = null;
+        while (menu != LeadMen.BACK) {
             System.out.println();
             System.out.println("1 - Показати дошку лідерів");
             System.out.println("2 - Повернутися до головного меню");
@@ -14,14 +14,15 @@ public class LeaderBoard {
             Scanner sc = new Scanner(System.in);
             String menuOption = sc.nextLine();
 
-            for (LeadMen1 i : LeadMen1.values()) {
+            for (LeadMen i : LeadMen.values()) {
                 if (menuOption.equals(i.menuNumber)) {
                     menu = i;
                 }
             }
             switch (menu) {
                 case START:
-                    System.out.println("виводимо дошку лідерів");
+                    System.out.println();
+                    System.out.println("виводимо дошку лідерів ...");
                     break;
                 case BACK:
                     break;

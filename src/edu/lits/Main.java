@@ -1,9 +1,5 @@
 package edu.lits;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Main {
@@ -20,7 +16,7 @@ public class Main {
             System.out.println("< Авторизація >");
             System.out.println("1 - Створити новий обліковий запис");
             System.out.println("2 - Увійти");
-            System.out.println("3 - Завершити роботиу");
+            System.out.println("3 - Завершити роботу");
             System.out.print("виберіть опцію: ");
             Scanner scan = new Scanner(System.in);
             String account = scan.nextLine();
