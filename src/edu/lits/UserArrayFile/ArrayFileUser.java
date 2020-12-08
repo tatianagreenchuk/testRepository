@@ -8,6 +8,7 @@ import java.util.List;
 
 public class ArrayFileUser {
     public static ArrayList<String> arrayUserName=new ArrayList<>();
+    public static ArrayList<String> arrayUserPassword=new ArrayList<>();
       public static void userUser() {
             User user=new User();
             for(String s: arreyLigstFile()){
@@ -16,6 +17,7 @@ public class ArrayFileUser {
                 user.setNameUser(s.substring(x+1,s.indexOf(".",x+1)));
                 user.setPasswordUser(s.substring(s.indexOf(".",x+1)+1));
                 arrayUserName.add(user.getNameUser());
+                arrayUserPassword.add(user.getPasswordUser());
             }
         }
         public static List<String> arreyLigstFile() {
