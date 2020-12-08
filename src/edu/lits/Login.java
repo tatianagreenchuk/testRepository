@@ -1,5 +1,7 @@
 package edu.lits;
 
+import edu.lits.UserArrayFile.ArrayFileUser;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -23,6 +25,14 @@ public class Login {
                 System.out.println();
                 System.out.println("Введіть свій логін: ");
                 String login = scan.nextLine();
+
+                ArrayFileUser arrayFileUser=new ArrayFileUser();
+                arrayFileUser.userUser();
+                for (String s :arrayFileUser.arrayUserName){
+                if(login.equals(s)){
+                    System.out.println("ви зареєстровані у нас");
+                }}
+
                 BufferedReader reader = new BufferedReader(new FileReader("User.txt"));
                 String fileString = reader.readLine();
 
