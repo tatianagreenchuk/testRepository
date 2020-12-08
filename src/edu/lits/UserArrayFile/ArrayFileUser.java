@@ -7,16 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ArrayFileUser {
-
-
     public static ArrayList<String> arrayUserName=new ArrayList<>();
-        //public static void main(String[] args) {
-
-            //  userUser();
-
-    //   }
-
-        public static void userUser() {
+      public static void userUser() {
             User user=new User();
             for(String s: arreyLigstFile()){
                 int x=s.indexOf(".");
@@ -26,10 +18,8 @@ public class ArrayFileUser {
                 arrayUserName.add(user.getNameUser());
             }
         }
-
         public static List<String> arreyLigstFile() {
             String userFile="User.txt";
-
             List<String>result=new ArrayList<>();
             try {
                 result= Files.readAllLines(Path.of(userFile));
@@ -38,7 +28,5 @@ public class ArrayFileUser {
             }
             return  result;
         }
-
-
    }
 
