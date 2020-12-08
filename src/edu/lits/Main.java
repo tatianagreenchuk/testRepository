@@ -1,15 +1,16 @@
 package edu.lits;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         start();
     }
 
-       public static void start() {
+       public static void start() throws IOException {
         String menu = "";
         while (!"3".equals(menu)) {
             System.out.println();
