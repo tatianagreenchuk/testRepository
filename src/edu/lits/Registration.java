@@ -6,10 +6,10 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Registration {
-    static final String CHOOSE = "виберіть опцію: ";
+    static final String CHOOSE = "Оберіть опцію: ";
     static final String LOGIN = "Ваш новий логін: ";
     static final String PASSWORD = "Ваш новий пароль: ";
-    static final String REPEAT = "повторіть Ваш Пароль: ";
+    static final String REPEAT = "Повторіть новий пароль: ";
 
     static boolean stayInMenu;
 
@@ -27,40 +27,35 @@ public class Registration {
             Scanner textInput = new Scanner(System.in);
             String menuOption = textInput.nextLine();
 
-
-
             RegMenu menu = RegMenu.BACK;
-            for (RegMenu i: RegMenu.values()) {
+            for (RegMenu i : RegMenu.values()) {
                 if (menuOption.equals(i.menuNumber)) {
                     menu = i;
                 }
             }
-
             switch (menu) {
                 case BACK:
                     stayInMenu = false;
                     break;
-                 case CREATE:
+                case CREATE:
 
-                     System.out.println();
+                    System.out.println();
                     System.out.print(LOGIN);
                     String login = textInput.nextLine();
 
-                    ArrayFileUser arrayFileUser=new ArrayFileUser();
+                    ArrayFileUser arrayFileUser = new ArrayFileUser();
                     arrayFileUser.userUser();
-                    for (String s :arrayFileUser.arrayUserName) {
+                    for (String s : arrayFileUser.arrayUserName) {
                         if (login.equals(s)) {
-                            System.out.println("такий логін вже існує ");
-                            System.out.println("спробуйте увійти в свій обліковій запис");
-                            Login beg = new Login();
-                            beg.startLogin();
-                        } }
-
-                            System.out.print(PASSWORD);
-                            String password = textInput.nextLine();
-                            System.out.print(REPEAT);
-                            String passwordRepeat = textInput.nextLine();
-
+                            System.out.println("Такий логін вже існує.\n" +
+                                    "Спробуйте увійти в свій обліковій запис");
+                            Login.startLogin();
+                        }
+                    }
+                    System.out.print(PASSWORD);
+                    String password = textInput.nextLine();
+                    System.out.print(REPEAT);
+                    String passwordRepeat = textInput.nextLine();
             }
         }
     }

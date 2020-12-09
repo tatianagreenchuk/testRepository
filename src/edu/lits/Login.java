@@ -18,7 +18,7 @@ public class Login {
             System.out.println();
             System.out.println("1 - Увійти в свій обліковий запис");
             System.out.println("2 - Повернутися до меню Авторизації");
-            System.out.print("виберіть опцію: ");
+            System.out.print("Оберіть опцію: ");
             Scanner scan = new Scanner(System.in);
             menu = scan.nextLine();
             if ("1".equals(menu)) {
@@ -26,31 +26,25 @@ public class Login {
                 System.out.println("Введіть свій логін: ");
                 String login = scan.nextLine();
 
-                ArrayFileUser arrayFileUser=new ArrayFileUser();
+                ArrayFileUser arrayFileUser = new ArrayFileUser();
                 arrayFileUser.userUser();
-                for (String s :arrayFileUser.arrayUserName){
-                if(login.equals(s)){
-                    System.out.println("ви зареєстровані у нас");
-                }}
-
+                for (String s : arrayFileUser.arrayUserName) {
+                    if (login.equals(s)) {
+                    }
+                }
                 BufferedReader reader = new BufferedReader(new FileReader("User.txt"));
                 String fileString = reader.readLine();
-
                 while (fileString != null) {
                     list.add(fileString);
                     fileString = reader.readLine();
                 }
-
-
                 for (int i = 0; i < list.size(); i++) {
                     int firstDot = list.get(i).indexOf(".");
                     int secondDot = list.get(i).indexOf(".", firstDot + 1);
                     String possibleUsername = list.get(i).substring(firstDot + 1, secondDot);
 
-
                     int thirdDot = list.get(i).indexOf(".", secondDot + 1);
                     String possiblePassword = list.get(i).substring(secondDot + 1, thirdDot);
-
 
                     if (possibleUsername.equals(login)) {
                         System.out.println("Введіть свій пароль: ");
@@ -62,13 +56,11 @@ public class Login {
                             System.out.println("Виникла помилка, невірний пароль.");
                             Login.startLogin();
                         }
-
                     }
                 }
-
                 System.out.println("Такого користувача не знайдено.\n" +
                         "Бажаєте зареєструватися? \n" +
-                        "1. Перейти до реєстрації    2. Спробувати ще раз");
+                        "1 - Перейти до реєстрації    2 - Спробувати ще раз");
                 String newline = scan.nextLine();
                 switch (newline) {
                     case "1":
@@ -78,9 +70,7 @@ public class Login {
                         Login.startLogin();
                         break;
                     default:
-                        System.out.println("Оберіть один із ваоріантів");
-
-
+                        System.out.println("Оберіть один із варіантів");
                 }
             }
         }

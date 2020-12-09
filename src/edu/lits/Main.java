@@ -14,20 +14,18 @@ public class Main {
         String menu = "";
         while (!"3".equals(menu)) {
             System.out.println();
-            System.out.println("< Авторизація >");
-            System.out.println("1 - Створити новий обліковий запис");
-            System.out.println("2 - Увійти");
-            System.out.println("3 - Завершити роботу");
-            System.out.print("виберіть опцію: ");
+            System.out.println("< Авторизація >\n" +
+                    "1 - Створити новий обліковий запис\n"+
+                    "2 - Увійти\n" +
+                    "3 - Завершити роботу\n" +
+                    "Оберіть опцію: ");
             Scanner scan = new Scanner(System.in);
             String account = scan.nextLine();
             if ("1".equals(account)) {
-                Registration registration = new Registration();
-                registration.createAccount();
+                Registration.createAccount();
             }
             if ("2".equals(account)) {
-                Login loG = new Login();
-                loG.startLogin();
+                Login.startLogin();
             }
             if ("3".equals(account)) {
                 menu = "3";
