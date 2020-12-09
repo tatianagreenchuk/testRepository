@@ -1,5 +1,8 @@
 package edu.lits;
 
+import edu.lits.UserArrayFile.ArrayFileUser;
+
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Registration {
@@ -10,7 +13,7 @@ public class Registration {
 
     static boolean stayInMenu;
 
-    public static void createAccount() {
+    public static void createAccount() throws IOException {
 
         stayInMenu = true;
 
@@ -24,6 +27,8 @@ public class Registration {
             Scanner textInput = new Scanner(System.in);
             String menuOption = textInput.nextLine();
 
+
+
             RegMenu menu = RegMenu.BACK;
             for (RegMenu i: RegMenu.values()) {
                 if (menuOption.equals(i.menuNumber)) {
@@ -35,14 +40,27 @@ public class Registration {
                 case BACK:
                     stayInMenu = false;
                     break;
-                case CREATE:
-                    System.out.println();
+                 case CREATE:
+
+                     System.out.println();
                     System.out.print(LOGIN);
                     String login = textInput.nextLine();
-                    System.out.print(PASSWORD);
-                    String password = textInput.nextLine();
-                    System.out.print(REPEAT);
-                    String passwordRepeat = textInput.nextLine();
+
+                    ArrayFileUser arrayFileUser=new ArrayFileUser();
+                    arrayFileUser.userUser();
+                    for (String s :arrayFileUser.arrayUserName) {
+                        if (login.equals(s)) {
+                            System.out.println("такий логін вже існує ");
+                            System.out.println("спробуйте увійти в свій обліковій запис");
+                            Login beg = new Login();
+                            beg.startLogin();
+                        } }
+
+                            System.out.print(PASSWORD);
+                            String password = textInput.nextLine();
+                            System.out.print(REPEAT);
+                            String passwordRepeat = textInput.nextLine();
+
             }
         }
     }
