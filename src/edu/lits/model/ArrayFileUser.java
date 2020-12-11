@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import static edu.lits.Main.FILE_USERS;
 public class ArrayFileUser {
+
     public static List<String> arrayFile(){
       List<String> result =new ArrayList<>();
       try{
@@ -22,11 +23,11 @@ public class ArrayFileUser {
     public static ArrayList<Integer> easyAnswerCountInt=new ArrayList<>();
     public static ArrayList<Integer> middleAnswerCountInt = new ArrayList<>();
     public static ArrayList<Integer> hardAnswerCountInt = new ArrayList<>();
-
-    public static void main(String[] args) {
-        arraySort();
-        System.out.println(hardAnswerCountInt.get(1));
-    }
+//
+//    public static void main(String[] args) {
+//        arraySort();
+//        System.out.println(hardAnswerCountInt.get(1));
+//    }
 
     public static void arraySort() {
         User user = new User();
