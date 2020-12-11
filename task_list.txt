@@ -1,169 +1,169 @@
-просте.1.The opposite of good is _____:
-1.ні.baed;
-2.так.bad;
-3.ні.bed.
+serhiikond.EASY.1.The opposite of good is _____:
+1.0.baed;
+2.1.bad;
+3.0.bed.
 
-просте.2.The opposite of hot is _____:
-1.ні.cald;
-2.ні.colt;
-3.так.cold.
+serhiikond.EASY.2.The opposite of hot is _____:
+1.0.cald;
+2.0.colt;
+3.1.cold.
 
-просте.3.The opposite of big is _____:
-1.так.small;
-2.ні.smoll;
-3.ні.shmall.
+serhiikond.EASY.3.The opposite of big is _____:
+1.1.small;
+2.0.smoll;
+3.0.shmall.
 
-просте.4.The opposite of close is _____:
-1.ні.closed;
-2.так.open;
-3.ні.opened.
+serhiikond.EASY.4.The opposite of close is _____:
+1.0.closed;
+2.1.open;
+3.0.opened.
 
-просте.5.The opposite of sad is _____:
-1.так.happy;
-2.ні.sadly;
-3.ні.happen.
+serhiikond.EASY.5.The opposite of sad is _____:
+1.1.happy;
+2.0.sadly;
+3.0.happen.
 
-просте.6.People can see because they have _____:
-1.ні.ears;
-2.ні.nose;
-3.так.eyes.
+serhiikond.EASY.6.People can see because they have _____:
+1.0.ears;
+2.0.nose;
+3.1.eyes.
 
-просте.7.People can walk because they have _____:
-1.так.legs;
-2.ні.ears;
-3.ні.nose.
+serhiikond.EASY.7.People can walk because they have _____:
+1.1.legs;
+2.0.ears;
+3.0.nose.
 
-просте.8.The colour and the fruit with the same name is _____:
-1.ні.red;
-2.так.orange;
-3.ні.blue.
+serhiikond.EASY.8.The colour and the fruit with the same name is _____:
+1.0.red;
+2.1.orange;
+3.0.blue.
 
-просте.9.Cows give _____. It is white:
-1.ні.meat;
-2.ні.cheese;
-3.так.milk.
+serhiikond.EASY.9.Cows give _____. It is white:
+1.0.meat;
+2.0.cheese;
+3.1.milk.
 
-просте.10.Potatoes, tomatoes, onions are _____:
-1.ні.fruit;
-2.так.vegetables;
-3.ні.fish.
+serhiikond.EASY.10.Potatoes, tomatoes, onions are _____:
+1.0.fruit;
+2.1.vegetables;
+3.0.fish.
 
-середнє.1.You need a/an _____ to sweep the floor:
-1.ні.vacuum cleaner;
-2.так.broom;
-3.ні.hammer;
-4.ні.towelr.
+serhiikond.MIDDLE.1.You need a/an _____ to sweep the floor:
+1.0.vacuum cleaner;
+2.1.broom;
+3.0.hammer;
+4.0.towelr.
 
-середнє.2.She is only 17 but seems older. She's very _____ for her age:
-1.ні.young;
-2.ні.ageing;
-3.ні.middle-aged;
-4.так.mature.
+serhiikond.MIDDLE.2.She is only 17 but seems older. She's very _____ for her age:
+1.0.young;
+2.0.ageing;
+3.0.middle-aged;
+4.1.mature.
 
-середнє.3.He looks _____ in these pink pants and green boots:
-1.так.weird;
-2.ні.bazar;
-3.ні.gloomy;
-4.ні.brave.
+serhiikond.MIDDLE.3.He looks _____ in these pink pants and green boots:
+1.1.weird;
+2.0.bazar;
+3.0.gloomy;
+4.0.brave.
 
-середнє.4.After eating an expired yogurt he had a pain in the _____:
-1.ні.neck;
-2.ні.ear;
-3.так.stomach;
-4.ні.head.
+serhiikond.MIDDLE.4.After eating an expired yogurt he had a pain in the _____:
+1.0.neck;
+2.0.ear;
+3.1.stomach;
+4.0.head.
 
-середнє.5._____ is typically not the way to cook potatoes:
-1.ні.frying;
-2.ні.baking;
-3.так.drying;
-4.ні.roasting.
+serhiikond.MIDDLE.5._____ is typically not the way to cook potatoes:
+1.0.frying;
+2.0.baking;
+3.1.drying;
+4.0.roasting.
 
-середнє.6.You won't receive a _____ for speeding:
-1.ні.fine;
-2.ні.penalty;
-3.ні.ticket;
-4.так.card.
+serhiikond.MIDDLE.6.You won't receive a _____ for speeding:
+1.0.fine;
+2.0.penalty;
+3.0.ticket;
+4.1.card.
 
-середнє.7.Mary likes to add _____ cream to her coffee:
-1.так.whipped;
-2.ні.beaten;
-3.ні.kicked;
-4.ні.smacked.
+serhiikond.MIDDLE.7.Mary likes to add _____ cream to her coffee:
+1.1.whipped;
+2.0.beaten;
+3.0.kicked;
+4.0.smacked.
 
-середнє.8.We _____ to inform you that the flight is delayed for 2 hours:
-1.ні.sorry;
-2.так.regret;
-3.ні.apologize;
-4.ні.pity.
+serhiikond.MIDDLE.8.We _____ to inform you that the flight is delayed for 2 hours:
+1.0.sorry;
+2.1.regret;
+3.0.apologize;
+4.0.pity.
 
-середнє.9.I'm asking you to _____ my idea about the party:
-1.ні.agree;
-2.ні.supply;
-3.так.support;
-4.ні.help.
+serhiikond.MIDDLE.9.I'm asking you to _____ my idea about the party:
+1.0.agree;
+2.0.supply;
+3.1.support;
+4.0.help.
 
-середнє.10.I only paid $2 for this T-shirt. It was a real _____:
-1.так.bargain;
-2.ні.sale;
-3.ні.cheap;
-4.ні.luck.
+serhiikond.MIDDLE.10.I only paid $2 for this T-shirt. It was a real _____:
+1.1.bargain;
+2.0.sale;
+3.0.cheap;
+4.0.luck.
 
-складне.1.Unfortunately our new partner turned _____ the invitation for lunch being too busy:
-1.ні.up;
-2.так.down;
-3.ні.over;
-4.ні.away.
+serhiikond.HARD.1.Unfortunately our new partner turned _____ the invitation for lunch being too busy:
+1.0.up;
+2.1.down;
+3.0.over;
+4.0.away.
 
-складне.2._____ is a synonym for 'scary':
-1.ні.intricate;
-2.ні.creeps;
-3.ні.awesome;
-4.так.intimidating.
+serhiikond.HARD.2._____ is a synonym for 'scary':
+1.0.intricate;
+2.0.creeps;
+3.0.awesome;
+4.1.intimidating.
 
-складне.3.My tutor is absolutely _____. He would consider all factors before taking decision in anybody's favor:
-1.так.unbiased;
-2.ні.subjective;
-3.ні.decisive;
-4.ні.friendly.
+serhiikond.HARD.3.My tutor is absolutely _____. He would consider all factors before taking decision in anybody's favor:
+1.1.unbiased;
+2.0.subjective;
+3.0.decisive;
+4.0.friendly.
 
-складне.4.Human beings normally don't have any _____ in their abdomen:
-1.ні.intestines;
-2.ні.liver;
-3.так.lungs;
-4.ні.bladder.
+serhiikond.HARD.4.Human beings normally don't have any _____ in their abdomen:
+1.0.intestines;
+2.0.liver;
+3.1.lungs;
+4.0.bladder.
 
-складне.5.The professor asked our group to hand _____ the essays in the end of the week:
-1.ні.over;
-2.так.in;
-3.ні.out;
-4.ні.up.
+serhiikond.HARD.5.The professor asked our group to hand _____ the essays in the end of the week:
+1.0.over;
+2.1.in;
+3.0.out;
+4.0.up.
 
-складне.6.The soil there is so depleted that no _____ can help grow anything:
-1.ні.pesticide;
-2.ні.rain;
-3.ні.pollution;
-4.так.fertilizer.
+serhiikond.HARD.6.The soil there is so depleted that no _____ can help grow anything:
+1.0.pesticide;
+2.0.rain;
+3.0.pollution;
+4.1.fertilizer.
 
-складне.7.The dress is a bit loose round the waist. But it shouldn't cost much to have it _____:
-1.ні.changed;
-2.так.altered;
-3.ні.ironed;
-4.ні.minimized.
+serhiikond.HARD.7.The dress is a bit loose round the waist. But it shouldn't cost much to have it _____:
+1.0.changed;
+2.1.altered;
+3.0.ironed;
+4.0.minimized.
 
-складне.8.It's so hot. Let's go out and sit in the _____ for a while:
-1.ні.shadow;
-2.ні.roof;
-3.так.shade;
-4.ні.kitchen.
+serhiikond.HARD.8.It's so hot. Let's go out and sit in the _____ for a while:
+1.0.shadow;
+2.0.roof;
+3.1.shade;
+4.0.kitchen.
 
-складне.9.W..W..Would you m..m..mind opening the w..w..window.- She was so nervous that she started _____ all of a sudden:
-1.так.stammering;
-2.ні.lisping;
-3.ні.repeating;
-4.ні.boasting.
+serhiikond.HARD.9.W..W..Would you m..m..mind opening the w..w..window.- She was so nervous that she started _____ all of a sudden:
+1.1.stammering;
+2.0.lisping;
+3.0.repeating;
+4.0.boasting.
 
-складне.10.A/an _____ is not a part of an eye:
-1.ні.lash;
-2.ні.iris;
-3.ні.pupil;
-4.так.thigh.
+serhiikond.HARD.10.A/an _____ is not a part of an eye:
+1.0.lash;
+2.0.iris;
+3.0.pupil;
+4.1.thigh.
