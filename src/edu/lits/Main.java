@@ -31,6 +31,16 @@ public class Main {
                 menu = "3";
             }
 
-        }
+        } /*String name="nameUser";
+                File work=new File(name+".txt");
+                try {
+                    PrintWriter works=new PrintWriter(new BufferedWriter(new FileWriter(work,true)));
+                    works.println("сюди якось запихнемо наш масивчик :-) ");
+                    works.flush();
+                    works.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                System.exit(0);*/
     }
 }

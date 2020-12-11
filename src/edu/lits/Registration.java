@@ -1,6 +1,8 @@
 package edu.lits;
 
-import edu.lits.UserArrayFile.ArrayFileUser;
+
+
+import edu.lits.model.ArrayFileUser;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -44,9 +46,10 @@ public class Registration {
                     String login = textInput.nextLine();
 
                     ArrayFileUser arrayFileUser = new ArrayFileUser();
-                    arrayFileUser.userUser();
-                    for (String s : arrayFileUser.arrayUserName) {
+                    arrayFileUser.arraySort();
+                    for (String s : arrayFileUser.loginString) {
                         if (login.equals(s)) {
+                            System.out.println();
                             System.out.println("Такий логін вже існує.\n" +
                                     "Спробуйте увійти в свій обліковій запис");
                             Login.startLogin();
