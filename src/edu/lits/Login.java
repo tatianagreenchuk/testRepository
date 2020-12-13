@@ -6,6 +6,8 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static edu.lits.model.WriterFileUser.writerFile;
+
 public class Login {
     public static void main(String[] args) throws IOException {
         startLogin();
@@ -45,9 +47,11 @@ public class Login {
                         String password = scan.nextLine();
 
                         if (password.equals(possiblePassword)) {
+                            writerFile.add("Navigation.startNavigation()");
                             Navigation.startNavigation();
                         } else {
                             System.out.println("Виникла помилка, невірний пароль.");
+                            writerFile.add("Login.startLogin();");
                             Login.startLogin();
                         }
                     }
@@ -58,9 +62,11 @@ public class Login {
                 String newline = scan.nextLine();
                 switch (newline) {
                     case "1":
+                        writerFile.add("Registration.createAccount();");
                         Registration.createAccount();
                         break;
                     case "2":
+                        writerFile.add("Login.startLogin();");
                         Login.startLogin();
                         break;
                     default:

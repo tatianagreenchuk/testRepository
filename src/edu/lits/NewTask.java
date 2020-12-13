@@ -2,6 +2,8 @@ package edu.lits;
 
 import java.util.Scanner;
 
+import static edu.lits.model.WriterFileUser.writerFile;
+
 public class NewTask {
     public static void main(String[] args) {
         createNewTask();
@@ -17,9 +19,10 @@ public class NewTask {
             Scanner n1 = new Scanner(System.in);
             menu = n1.nextLine();
             if ("1".equals(menu)) {
+                writerFile.add("Створюємо завдання");
                 System.out.println();
                 System.out.println("Створюємо завдання ...");
             }
-        }
+        }writerFile.add("Повернутися до головного меню");
     }
 }

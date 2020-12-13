@@ -6,12 +6,12 @@ import java.util.ArrayList;
 public class WriterFileUser {
    public static ArrayList<String>writerFile=new ArrayList<>();
     public static void main(String[] args)  {
-        writerFile.add("привет");
-        writerFile.add("как дела");
-        writerFile.add("все ок?");
-        writerFile.add("ну давай");
-        writerFile.add("удачи");
+    //    writerFile.add("");
 
+       //writerFileUser();
+    }
+
+    public static void writerFileUser() {
         String nameFile="WorkUser.txt";
         File work=new File(nameFile);
         try {

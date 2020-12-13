@@ -3,6 +3,8 @@ package edu.lits;
 import edu.lits.model.ArrayFileUser;
 import java.util.Scanner;
 
+import static edu.lits.model.WriterFileUser.writerFile;
+
 public class LeaderBoard {
 
     static void showLeaderBoard() {
@@ -24,6 +26,7 @@ public class LeaderBoard {
                 case START:
                     System.out.println();
                     System.out.println("Наші лідери:\n");
+                    writerFile.add("Наші лідери:");
                     ArrayFileUser arFil = new ArrayFileUser();
                     arFil.arraySort();
                     for (String s : arFil.loginString){
@@ -31,6 +34,7 @@ public class LeaderBoard {
                     }
                     break;
                 case BACK:
+                    writerFile.add("Повернутися до головного меню");
                     break;
                 default:
                     System.out.println("Please, choose an option from 1 to 2");

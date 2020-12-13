@@ -3,6 +3,9 @@ package edu.lits;
 import java.io.IOException;
 import java.util.Scanner;
 
+import static edu.lits.model.WriterFileUser.writerFile;
+import static edu.lits.model.WriterFileUser.writerFileUser;
+
 public class Main {
      public static final String FILE_USERS = "User.txt";
 
@@ -22,25 +25,19 @@ public class Main {
             Scanner scan = new Scanner(System.in);
             String account = scan.nextLine();
             if ("1".equals(account)) {
+                writerFile.add("Registration.createAccount();");
                 Registration.createAccount();
             }
             if ("2".equals(account)) {
+                writerFile.add("Login.startLogin();");
                 Login.startLogin();
             }
             if ("3".equals(account)) {
+                writerFile.add("menu");
                 menu = "3";
             }
-
-        } /*String name="nameUser";
-                File work=new File(name+".txt");
-                try {
-                    PrintWriter works=new PrintWriter(new BufferedWriter(new FileWriter(work,true)));
-                    works.println("сюди якось запихнемо наш масивчик :-) ");
-                    works.flush();
-                    works.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                System.exit(0);*/
+                writerFile.add("System.exit(0)");
+        }       writerFileUser();
+                System.exit(0);
     }
 }

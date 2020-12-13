@@ -2,6 +2,8 @@ package edu.lits;
 
 import java.util.Scanner;
 
+import static edu.lits.model.WriterFileUser.writerFile;
+
 public class Testing {
 
     static void startTesting() {
@@ -15,10 +17,12 @@ public class Testing {
             menu = sc.nextLine();
                 switch (menu) {
                     case "1":
+                        writerFile.add("запускаємо тестування");
                         System.out.println();
                         System.out.println("запускаємо тестування ...");
                         break;
                     case "2":
+                        writerFile.add(" Повернутися до головного меню");
                         break;
                     default:
                         System.out.println("Please, choose an option from 1 to 2");

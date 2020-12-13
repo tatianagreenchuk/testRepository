@@ -6,7 +6,7 @@ import edu.lits.model.ArrayFileUser;
 
 import java.io.IOException;
 import java.util.Scanner;
-
+import static edu.lits.model.WriterFileUser.writerFile;
 public class Registration {
     static final String CHOOSE = "Оберіть опцію: ";
     static final String LOGIN = "Ваш новий логін: ";
@@ -37,6 +37,7 @@ public class Registration {
             }
             switch (menu) {
                 case BACK:
+                    writerFile.add("stayInMenu");
                     stayInMenu = false;
                     break;
                 case CREATE:
@@ -52,6 +53,7 @@ public class Registration {
                             System.out.println();
                             System.out.println("Такий логін вже існує.\n" +
                                     "Спробуйте увійти в свій обліковій запис");
+                            writerFile.add("Login.startLogin();");
                             Login.startLogin();
                         }
                     }
@@ -59,6 +61,7 @@ public class Registration {
                     String password = textInput.nextLine();
                     System.out.print(REPEAT);
                     String passwordRepeat = textInput.nextLine();
+                    writerFile.add( "login: "+login+", password: "+password);
             }
         }
     }
