@@ -1,83 +1,37 @@
 package edu.lits;
 
-
-
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Scanner;
-
+import static edu.lits.Main.start;
+import static edu.lits.model.ArrayFileUser.*;
 import static edu.lits.model.WriterFileUser.writerFile;
 
 public class Login {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
         startLogin();
     }
 
-    public static void startLogin() throws IOException {
-        ArrayList<String> list = new ArrayList<>();
-        String menu = "";
-        while (!"2".equals(menu)) {
-            System.out.println();
-            System.out.println("1 - Увійти в свій обліковий запис");
-            System.out.println("2 - Повернутися до меню Авторизації");
-            System.out.print("Оберіть опцію: ");
-            Scanner scan = new Scanner(System.in);
-            menu = scan.nextLine();
-            if ("1".equals(menu)) {
-                System.out.println();
-                System.out.println("Введіть свій логін: ");
-                String login = scan.nextLine();
-
-                BufferedReader reader = new BufferedReader(new FileReader("User.txt"));
-                String fileString = reader.readLine();
-                while (fileString != null) {
-                    list.add(fileString);
-                    fileString = reader.readLine();
-                }
-                for (int i = 0; i < list.size(); i++) {
-                    int firstDot = list.get(i).indexOf(".");
-                    int secondDot = list.get(i).indexOf(".", firstDot + 1);
-                    String possibleUsername = list.get(i).substring(firstDot + 1, secondDot);
-
-                    int thirdDot = list.get(i).indexOf(".", secondDot + 1);
-                    String possiblePassword = list.get(i).substring(secondDot + 1, thirdDot);
-
-                    if (possibleUsername.equals(login)) {
-                        System.out.println("Введіть свій пароль: ");
-                        String password = scan.nextLine();
-
-                        if (password.equals(possiblePassword)) {
-                            writerFile.add("Navigation.startNavigation()");
-                            Navigation.startNavigation();
-                        } else {
-                            System.out.println("Виникла помилка, невірний пароль.");
-                            writerFile.add("Login.startLogin();");
-                            Login.startLogin();
-                        }
-                    }
-                }
-                System.out.println("Такого користувача не знайдено.\n" +
-                        "Бажаєте зареєструватися? \n" +
-                        "1 - Перейти до реєстрації    2 - Спробувати ще раз");
-                String newline = scan.nextLine();
-                switch (newline) {
-                    case "1":
-                        writerFile.add("Registration.createAccount();");
-                        Registration.createAccount();
-                        break;
-                    case "2":
-                        writerFile.add("Login.startLogin();");
-                        Login.startLogin();
-                        break;
-                    default:
-                        System.out.println("Оберіть один із варіантів");
-                }
-            }
+    public static void startLogin()  {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введіть свій логін: ");
+        String login = scan.nextLine();
+        arraySort();
+        boolean userName=loginString.contains(login);
+        if (userName){
+            System.out.println("Введіть свій пароль: ");
+            String password = scan.nextLine();
+            boolean passwordUser = passwordString.contains(password);
+                if (passwordUser){
+                    writerFile.add("Navigation.startNavigation()");
+                }else {
+                    System.out.println("тфкий пароль не зареєстрований за цим логіном");
+                    System.out.println("почніть з початку");
+                    start();
+                }  } else {
+            System.out.println("Виникла помилка, невірний логін");
+            System.out.println("почніть з початку");
+            start();
+            writerFile.add("Login.startLogin();");
         }
     }
 }
-
-
-
-
-

@@ -40,7 +40,8 @@ public class LeaderBoard {
                     System.out.println("Please, choose an option from 1 to 2");
             }
 
-       break; }
+       break;
+        }
 
     }
 

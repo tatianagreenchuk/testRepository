@@ -24,10 +24,10 @@ public class ArrayFileUser {
     public static ArrayList<Integer> middleAnswerCountInt = new ArrayList<>();
     public static ArrayList<Integer> hardAnswerCountInt = new ArrayList<>();
 //
-//    public static void main(String[] args) {
+//   public static void main(String[] args) {
 //        arraySort();
-//        System.out.println(hardAnswerCountInt.get(1));
-//    }
+//       System.out.println(passwordString.get(1));
+//   }
 
     public static void arraySort() {
         User user = new User();

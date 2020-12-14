@@ -15,7 +15,7 @@ public class Registration {
 
     static boolean stayInMenu;
 
-    public static void createAccount() throws IOException {
+    public static void createAccount()  {
 
         stayInMenu = true;
 
