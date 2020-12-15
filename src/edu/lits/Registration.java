@@ -27,8 +27,7 @@ public class Registration {
                             System.out.println();
                             System.out.println("Такий логін вже існує.\n" +
                                     "Спробуйте увійти в свій обліковій запис");
-
-                            writerFile.add("Login.startLogin();");
+                            writerFile.add("Тфкий логін вже існує,Починаємо з почетку");
                             start();
                         }
                     }

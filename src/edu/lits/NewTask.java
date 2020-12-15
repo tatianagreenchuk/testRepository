@@ -11,6 +11,9 @@ public class NewTask {
 
     public static void createNewTask() {
         String menu = "";
+        if ("2".equals(menu)){
+            writerFile.add("Завершили створення завдання");
+        }
         while (!"2".equals(menu)) {
             System.out.println();
             System.out.println("1 - Створити нове завдання");
@@ -23,6 +26,6 @@ public class NewTask {
                 System.out.println();
                 System.out.println("Створюємо завдання ...");
             }
-        }writerFile.add("Повернутися до головного меню");
+        }
     }
 }

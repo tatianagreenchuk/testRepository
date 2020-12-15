@@ -22,7 +22,6 @@ public class Testing {
                         System.out.println("запускаємо тестування ...");
                         break;
                     case "2":
-                        writerFile.add(" Повернутися до головного меню");
                         break;
                     default:
                         System.out.println("Please, choose an option from 1 to 2");

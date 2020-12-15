@@ -9,7 +9,7 @@ public class LeaderBoard {
     static void showLeaderBoard() {
                          System.out.println();
                     System.out.println("Наші лідери:\n");
-                    writerFile.add("Наші лідери:");
+                    writerFile.add("Вивели дошку лідерів");
                     ArrayFileUser arFil = new ArrayFileUser();
                     arFil.arraySort();
                     for (String s : arFil.loginString){

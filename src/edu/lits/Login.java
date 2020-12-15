@@ -23,17 +23,17 @@ public class Login {
             String password = scan.nextLine();
             boolean passwordUser = passwordString.contains(password);
                 if (passwordUser){
-                    writerFile.add("Navigation.startNavigation()");
+                    System.out.println("Ви успішно зареєструвалися");
                 }else {
-                    System.out.println("тфкий пароль не зареєстрований за цим логіном");
+                    System.out.println("такий пароль не зареєстрований за цим логіном");
                     System.out.println("почніть з початку");
+                    writerFile.add("Тфкий пароль не зареєстрований за цим логіном,Поченаємо з початку");
                     start();
                 }  } else {
             System.out.println("Виникла помилка, невірний логін");
             System.out.println("почніть з початку");
+            writerFile.add("Винекла помилка, невірний логін,Починаємо з початку");
             start();
-            writerFile.add("Login.startLogin();");
-
         }
     }
 }

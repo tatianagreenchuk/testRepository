@@ -24,19 +24,19 @@ public class Navigation {
             line = scan.nextLine();
             switch (line) {
                 case "1":
-                    writerFile.add("NewTask.createNewTask();");
                     NewTask.createNewTask();
+                    writerFile.add("Повернулись до навігації");
                     break;
                 case "2":
-                    writerFile.add("Testing.startTesting();");
                     Testing.startTesting();
+                    writerFile.add("Повернулись до навігації");
                     break;
                 case "3":
-                    writerFile.add("LeaderBoard.showLeaderBoard();");
                     LeaderBoard.showLeaderBoard();
+                    writerFile.add("Повернулись до навігації");
                     break;
                 case "4":
-                    writerFile.add("4 - Повернутися до меню Авторизації");
+                    writerFile.add(" Повернулись до Авторизації");
                     break;
                 default:
                     writerFile.add("Будь ласка, оберіть опцію від 1 до 4");

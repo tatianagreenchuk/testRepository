@@ -10,6 +10,7 @@ public class Main {
      public static final String FILE_USERS = "User.txt";
 
     public static void main(String[] args)  {
+        writerFile.add("Розпочали роботу");
         start();
     }
 
@@ -26,22 +27,23 @@ public class Main {
             String account = scan.nextLine();
             if ("1".equals(account) || "1".equals(account))
                 if ("1".equals(account)) {
-                    writerFile.add("Registration.createAccount();");
+                    writerFile.add("Реєструєм логін та пароль");
                     Registration.createAccount();
+                    writerFile.add("Успішно зареєструвалися, переходим до навігації");
                     startNavigation();
                 }
             if ("2".equals(account)) {
-                writerFile.add("Login.startLogin();");
+                writerFile.add("Перквіряєм логін та пароль");
                 Login.startLogin();
+                writerFile.add("Успішно залогінелись, переходим в навігацію");
                 startNavigation();
             }
             if ("3".equals(account)) {
-                writerFile.add("menu");
                 menu = "3";
             }
         }
-               writerFileUser();
-                writerFile.add("System.exit(0)");
-                System.exit(0);
+                writerFile.add("Завершуєм роботу");
+           writerFileUser();
+           System.exit(0);
     }
 }
