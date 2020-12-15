@@ -1,11 +1,10 @@
 package edu.lits;
 
-
-
 import edu.lits.model.ArrayFileUser;
 
-import java.io.IOException;
 import java.util.Scanner;
+
+import static edu.lits.Main.start;
 import static edu.lits.model.WriterFileUser.writerFile;
 public class Registration {
     static final String CHOOSE = "Оберіть опцію: ";
@@ -13,36 +12,11 @@ public class Registration {
     static final String PASSWORD = "Ваш новий пароль: ";
     static final String REPEAT = "Повторіть новий пароль: ";
 
-    static boolean stayInMenu;
+
 
     public static void createAccount()  {
 
-        stayInMenu = true;
-
-        while (stayInMenu) {
-
-            System.out.println();
-            System.out.println(RegMenu.CREATE.menuNumber + " - " + RegMenu.CREATE.menuName);
-            System.out.println(RegMenu.BACK.menuNumber + " - " + RegMenu.BACK.menuName);
-            System.out.print(CHOOSE);
-
             Scanner textInput = new Scanner(System.in);
-            String menuOption = textInput.nextLine();
-
-            RegMenu menu = RegMenu.BACK;
-            for (RegMenu i : RegMenu.values()) {
-                if (menuOption.equals(i.menuNumber)) {
-                    menu = i;
-                }
-            }
-            switch (menu) {
-                case BACK:
-                    writerFile.add("stayInMenu");
-                    stayInMenu = false;
-                    break;
-                case CREATE:
-
-                    System.out.println();
                     System.out.print(LOGIN);
                     String login = textInput.nextLine();
 
@@ -53,8 +27,9 @@ public class Registration {
                             System.out.println();
                             System.out.println("Такий логін вже існує.\n" +
                                     "Спробуйте увійти в свій обліковій запис");
+
                             writerFile.add("Login.startLogin();");
-                            Login.startLogin();
+                            start();
                         }
                     }
                     System.out.print(PASSWORD);
@@ -64,5 +39,3 @@ public class Registration {
                     writerFile.add( "login: "+login+", password: "+password);
             }
         }
-    }
-}

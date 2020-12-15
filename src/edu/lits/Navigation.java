@@ -42,7 +42,7 @@ public class Navigation {
                     writerFile.add("Будь ласка, оберіть опцію від 1 до 4");
                     System.out.println("Будь ласка, оберіть опцію від 1 до 4");
                     break;
-            }break;
+            }
         }
     }
 }
