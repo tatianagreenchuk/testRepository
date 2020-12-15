@@ -23,7 +23,14 @@ public class ArrayFileUser {
     public static ArrayList<Integer> easyAnswerCountInt=new ArrayList<>();
     public static ArrayList<Integer> middleAnswerCountInt = new ArrayList<>();
     public static ArrayList<Integer> hardAnswerCountInt = new ArrayList<>();
-//
+
+    public static ArrayList<String> nameString=new ArrayList<>();
+    public static ArrayList<String> surnameString=new ArrayList<>();
+    public static ArrayList<String> dateOfBirthString=new ArrayList<>();
+    public static ArrayList<String> emailString=new ArrayList<>();
+    public static ArrayList<String> countryString=new ArrayList<>();
+    public static ArrayList<String> cityString=new ArrayList<>();
+    //
 //   public static void main(String[] args) {
 //        arraySort();
 //       System.out.println(passwordString.get(1));
@@ -32,22 +39,29 @@ public class ArrayFileUser {
     public static void arraySort() {
         User user = new User();
         for (String s : arrayFile()){
-            int x=s.indexOf(".");
-            int x2=s.indexOf(".",s.indexOf(".",x+1)+1);
-            int x3=s.indexOf(".",x2+1);
-            int x4=s.indexOf(".",x3+1);
+            int x=s.indexOf(",");
+            int x2=s.indexOf(",",s.indexOf(",",x+1)+1);
+            int x3=s.indexOf(",",x2+1);
+            int x4=s.indexOf(",",x3+1);
             user.setId(Integer.parseInt(s.substring(0,x)));
-            user.setLogin(s.substring(x+1,s.indexOf(".",x+1)));
-            user.setPassword(s.substring(s.indexOf(".",x+1)+1,x2));
+            user.setLogin(s.substring(x+1,s.indexOf(",",x+1)));
+            user.setPassword(s.substring(s.indexOf(",",x+1)+1,x2));
             user.setEasyAnswerCount(Integer.parseInt(s.substring(x2+1,x3)));
             user.setMiddleAnswerCount(Integer.parseInt(s.substring(x3+1,x4)));
             user.setHardAnswerCount(Integer.parseInt(s.substring(x4+1,s.indexOf(";"))));
             idInt.add(user.getId());
-             loginString.add(user.getLogin());
+            loginString.add(user.getLogin());
             passwordString.add(user.getPassword());
             easyAnswerCountInt.add(user.getEasyAnswerCount());
             middleAnswerCountInt.add(user.getMiddleAnswerCount());
             hardAnswerCountInt.add(user.getHardAnswerCount());
+
+            nameString.add(user.getName());
+            surnameString.add(user.getSurname());
+            dateOfBirthString.add(user.getDateOfBirth());
+            emailString.add(user.getEmail());
+            countryString.add(user.getCountry());
+            cityString.add(user.getCity());
             }
     }
 }
