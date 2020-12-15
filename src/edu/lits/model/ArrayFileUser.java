@@ -30,10 +30,11 @@ public class ArrayFileUser {
     public static ArrayList<String> emailString=new ArrayList<>();
     public static ArrayList<String> countryString=new ArrayList<>();
     public static ArrayList<String> cityString=new ArrayList<>();
-    //
+
 //   public static void main(String[] args) {
 //        arraySort();
-//       System.out.println(passwordString.get(1));
+//        for (String i:cityString){
+//       System.out.println(i);}
 //   }
 
     public static void arraySort() {
@@ -43,12 +44,25 @@ public class ArrayFileUser {
             int x2=s.indexOf(",",s.indexOf(",",x+1)+1);
             int x3=s.indexOf(",",x2+1);
             int x4=s.indexOf(",",x3+1);
+            int x5=s.indexOf(",",x4+1);
+            int x6=s.indexOf(",",x5+1);
+            int x7=s.indexOf(",",x6+1);
+            int x8=s.indexOf(",",x7+1);
+            int x9=s.indexOf(",",x8+1);
+            int x10=s.indexOf(",",x9+1);
             user.setId(Integer.parseInt(s.substring(0,x)));
             user.setLogin(s.substring(x+1,s.indexOf(",",x+1)));
             user.setPassword(s.substring(s.indexOf(",",x+1)+1,x2));
             user.setEasyAnswerCount(Integer.parseInt(s.substring(x2+1,x3)));
             user.setMiddleAnswerCount(Integer.parseInt(s.substring(x3+1,x4)));
-            user.setHardAnswerCount(Integer.parseInt(s.substring(x4+1,s.indexOf(";"))));
+            user.setHardAnswerCount(Integer.parseInt(s.substring(x4+1,x5)));
+            user.setName(s.substring(x5+1,x6));
+            user.setSurname(s.substring(x6+1,x7));
+            user.setDateOfBirth(s.substring(x7+1,x8));
+            user.setEmail(s.substring(x8+1,x9));
+            user.setCountry(s.substring(x9+1,x10));
+            user.setCity(s.substring(x10+1,s.indexOf(";")));
+
             idInt.add(user.getId());
             loginString.add(user.getLogin());
             passwordString.add(user.getPassword());

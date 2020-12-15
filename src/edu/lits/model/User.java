@@ -2,7 +2,7 @@ package edu.lits.model;
 
 import java.util.Objects;
 
-//10,gennadii,00000,6,7,8,gennadii,petrov,9-10-1985,genchik@gmail.com,ukraine,vinnytsia
+//10,gennadii,00000,6,7,8,gennadii,petrov,9-10-1985,genchik@gmail.com,ukraine,vinnytsia;
 public class User {
     private int id;
     private String login;
@@ -10,6 +10,7 @@ public class User {
     private int easyAnswerCount;
     private int middleAnswerCount;
     private int hardAnswerCount;
+
     private String name;
     private String surname;
     private String dateOfBirth;
