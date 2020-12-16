@@ -1,20 +1,27 @@
 package edu.lits;
 
 import java.util.Scanner;
+import java.util.ArrayList;
+
+import edu.lits.model.Task;
+import edu.lits.model.ArrayFileUser;
 
 import static edu.lits.Navigation.startNavigation;
 import static edu.lits.model.WriterFileUser.writerFile;
 import static edu.lits.model.WriterFileUser.writerFileUser;
 
 public class Main {
-     public static final String FILE_USERS = "User.txt";
+    public static final String FILE_USERS = "User.txt";
+    public static final String TASK_FILE_NAME = "task_list.txt";
+    public static ArrayList<Task> taskList;
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
+        taskList = ArrayFileUser.createTaskArrayList();
         writerFile.add("Розпочали роботу");
         start();
     }
 
-       public static void start()  {
+    public static void start() {
         String menu = "";
         while (!"3".equals(menu)) {
             System.out.println();
@@ -42,8 +49,8 @@ public class Main {
                 menu = "3";
             }
         }
-                writerFile.add("Завершуєм роботу");
-           writerFileUser();
-           System.exit(0);
+        writerFile.add("Завершуєм роботу");
+        writerFileUser();
+        System.exit(0);
     }
 }
