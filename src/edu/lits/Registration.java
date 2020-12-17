@@ -31,6 +31,8 @@ public class Registration {
                             start();
                         }
                     }
+                    Main main = new Main();
+                    main.loginUser=login;
                     System.out.print(PASSWORD);
                     String password = textInput.nextLine();
                     System.out.print(REPEAT);

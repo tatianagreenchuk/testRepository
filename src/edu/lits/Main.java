@@ -14,7 +14,7 @@ public class Main {
     public static final String FILE_USERS = "User.txt";
     public static final String TASK_FILE_NAME = "task_list.txt";
     public static ArrayList<Task> taskList;
-
+    public static String loginUser;
     public static void main(String[] args) {
         taskList = ArrayFileUser.createTaskArrayList();
         writerFile.add("Розпочали роботу");

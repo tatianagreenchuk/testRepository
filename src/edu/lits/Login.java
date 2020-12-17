@@ -8,6 +8,7 @@ import static edu.lits.model.ArrayFileUser.*;
 import static edu.lits.model.WriterFileUser.writerFile;
 
 public class Login {
+
     public static void main(String[] args)  {
         startLogin();
     }
@@ -23,7 +24,9 @@ public class Login {
             String password = scan.nextLine();
             boolean passwordUser = passwordString.contains(password);
                 if (passwordUser){
-                    System.out.println("Ви успішно зареєструвалися");
+                    Main main = new Main();
+                    main.loginUser = login;
+                    System.out.println("Ви увійшли в свій аккаунт");
                 }else {
                     System.out.println("такий пароль не зареєстрований за цим логіном");
                     System.out.println("почніть з початку");
