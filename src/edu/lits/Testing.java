@@ -1,11 +1,14 @@
 package edu.lits;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import edu.lits.model.*;
+
 import static edu.lits.model.WriterFileUser.writerFile;
 
 public class Testing {
+    static ArrayList<Integer> rightAnswers = new ArrayList<>();
 
     static void startTesting() {
         String menu = "";
@@ -18,15 +21,15 @@ public class Testing {
             System.out.print("виберіть опцію: ");
             Scanner sc = new Scanner(System.in);
             menu = sc.nextLine();
-                switch (menu) {
-                    case "1":
-                        break;
-                    case "2":
-                        stayInLoop = false;
-                        break;
-                    default:
-                        stayInLoop = false;
-                }
+            switch (menu) {
+                case "1":
+                    break;
+                case "2":
+                    stayInLoop = false;
+                    break;
+                default:
+                    stayInLoop = false;
+            }
         }
     }
 
@@ -97,11 +100,19 @@ public class Testing {
             if (rightAnswer.getNumber() == userAnswer.getNumber()) {
                 System.out.println("_____________________ ");
                 System.out.println("Вірно!");
+                rightAnswers.add(1);
             } else {
                 System.out.println("_____________________ ");
                 System.out.println("Невірно. Правильна відповідь: " + rightAnswer.getText());
             }
             System.out.println();
+
+
         }
+        System.out.println("Кількість вірних відповідей: " + rightAnswers.size());
+
+
     }
 }
+
+
