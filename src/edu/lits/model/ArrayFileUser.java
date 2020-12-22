@@ -23,29 +23,22 @@ public class ArrayFileUser {
         return result;
     }
 
-    public static ArrayList<Integer> idInt = new ArrayList<>();
     public static ArrayList<String> loginString = new ArrayList<>();
-    public static ArrayList<String> passwordString = new ArrayList<>();
-    public static ArrayList<Integer> easyAnswerCountInt = new ArrayList<>();
-    public static ArrayList<Integer> middleAnswerCountInt = new ArrayList<>();
-    public static ArrayList<Integer> hardAnswerCountInt = new ArrayList<>();
-
-    public static ArrayList<String> nameString = new ArrayList<>();
-    public static ArrayList<String> surnameString = new ArrayList<>();
-    public static ArrayList<String> dateOfBirthString = new ArrayList<>();
-    public static ArrayList<String> emailString = new ArrayList<>();
-    public static ArrayList<String> countryString = new ArrayList<>();
-    public static ArrayList<String> cityString = new ArrayList<>();
-
+//
 //   public static void main(String[] args) {
-//        arraySort();
-//        for (String i:cityString){
-//       System.out.println(i);}
+//
+//        for (User i:arraySort()) {
+//            loginString.add(i.getLogin());
+//        }
+//        int n = loginString.indexOf("nazar");
+//       System.out.println(n);
+//
 //   }
 
-    public static void arraySort() {
-        User user = new User();
+    public static ArrayList<User> arraySort() {
+        ArrayList<User> idInt = new ArrayList<>();
         for (String s : arrayFile()) {
+            User user = new User();//ось тут його обявляти тоді все норм
             int x = s.indexOf(",");
             int x2 = s.indexOf(",", s.indexOf(",", x + 1) + 1);
             int x3 = s.indexOf(",", x2 + 1);
@@ -69,20 +62,9 @@ public class ArrayFileUser {
             user.setCountry(s.substring(x9 + 1, x10));
             user.setCity(s.substring(x10 + 1, s.indexOf(";")));
 
-            idInt.add(user.getId());
-            loginString.add(user.getLogin());
-            passwordString.add(user.getPassword());
-            easyAnswerCountInt.add(user.getEasyAnswerCount());
-            middleAnswerCountInt.add(user.getMiddleAnswerCount());
-            hardAnswerCountInt.add(user.getHardAnswerCount());
+            idInt.add(user);
 
-            nameString.add(user.getName());
-            surnameString.add(user.getSurname());
-            dateOfBirthString.add(user.getDateOfBirth());
-            emailString.add(user.getEmail());
-            countryString.add(user.getCountry());
-            cityString.add(user.getCity());
-        }
+        }return idInt;
     }
 
     //метод який переносить завдання із файлу task_list.txt в колекцію taskList

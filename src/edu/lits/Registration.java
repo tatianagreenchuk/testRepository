@@ -1,7 +1,9 @@
 package edu.lits;
 
-import edu.lits.model.ArrayFileUser;
+//import edu.lits.model.ArrayFileUser;
+import edu.lits.model.User;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import static edu.lits.Main.start;
@@ -20,17 +22,20 @@ public class Registration {
                     System.out.print(LOGIN);
                     String login = textInput.nextLine();
 
-                    ArrayFileUser arrayFileUser = new ArrayFileUser();
-                    arrayFileUser.arraySort();
-                    for (String s : arrayFileUser.loginString) {
-                        if (login.equals(s)) {
+                    ArrayList <String>loginString = new ArrayList();
+                   // arrayFileUser.arraySort();
+                    for (User s : Main.arrayUser) {
+                        loginString.add(s.getLogin());
+                    }
+                    boolean userLogin=loginString.contains(login);
+                        if (userLogin) {
                             System.out.println();
                             System.out.println("Такий логін вже існує.\n" +
                                     "Спробуйте увійти в свій обліковий запис");
                             writerFile.add("Такий логін вже існує,Починаємо з початку");
                             start();
                         }
-                    }
+
                     Main main = new Main();
                     main.loginUser=login;
                     System.out.print(PASSWORD);

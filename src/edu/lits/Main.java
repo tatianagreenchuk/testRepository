@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import edu.lits.model.Task;
 import edu.lits.model.ArrayFileUser;
+import edu.lits.model.User;
 
 import static edu.lits.Navigation.startNavigation;
 import static edu.lits.model.WriterFileUser.writerFile;
@@ -15,7 +16,10 @@ public class Main {
     public static final String TASK_FILE_NAME = "task_list.txt";
     public static ArrayList<Task> taskList;
     public static String loginUser;
+    public static ArrayList<User>arrayUser=ArrayFileUser.arraySort();
     public static void main(String[] args) {
+        System.out.println(arrayUser.get(1).getPassword());//це витерти
+
         taskList = ArrayFileUser.createTaskArrayList();
         writerFile.add("Розпочали роботу");
         start();

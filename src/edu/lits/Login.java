@@ -1,10 +1,11 @@
 package edu.lits;
 
 
-import java.io.*;
+import edu.lits.model.User;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 import static edu.lits.Main.start;
-import static edu.lits.model.ArrayFileUser.*;
 import static edu.lits.model.WriterFileUser.writerFile;
 
 public class Login {
@@ -17,12 +18,18 @@ public class Login {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введіть свій логін: ");
         String login = scan.nextLine();
-        arraySort();
+        //arraySort();
+        ArrayList<String>loginString=new ArrayList<>();
+       for (User i:Main.arrayUser){
+           loginString.add(i.getLogin());
+       }
         boolean userName=loginString.contains(login);
         if (userName){
             System.out.println("Введіть свій пароль: ");
             String password = scan.nextLine();
-            boolean passwordUser = passwordString.contains(password);
+
+            int n = loginString.indexOf(login);
+            boolean passwordUser = Main.arrayUser.get(n).getPassword().contains(password);
                 if (passwordUser){
                     Main main = new Main();
                     main.loginUser = login;
