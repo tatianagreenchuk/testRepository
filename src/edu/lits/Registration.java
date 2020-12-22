@@ -21,13 +21,7 @@ public class Registration {
             Scanner textInput = new Scanner(System.in);
                     System.out.print(LOGIN);
                     String login = textInput.nextLine();
-
-                    ArrayList <String>loginString = new ArrayList();
-                   // arrayFileUser.arraySort();
-                    for (User s : Main.arrayUser) {
-                        loginString.add(s.getLogin());
-                    }
-                    boolean userLogin=loginString.contains(login);
+                    boolean userLogin=Main.arrayLoginUser.contains(login);
                         if (userLogin) {
                             System.out.println();
                             System.out.println("Такий логін вже існує.\n" +

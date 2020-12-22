@@ -17,8 +17,9 @@ public class Main {
     public static ArrayList<Task> taskList;
     public static String loginUser;
     public static ArrayList<User>arrayUser=ArrayFileUser.arraySort();
+    public static ArrayList<String>arrayLoginUser=ArrayFileUser.loginString();
+
     public static void main(String[] args) {
-        System.out.println(arrayUser.get(1).getPassword());//це витерти
 
         taskList = ArrayFileUser.createTaskArrayList();
         writerFile.add("Розпочали роботу");
@@ -36,7 +37,7 @@ public class Main {
                     "Оберіть опцію: ");
             Scanner scan = new Scanner(System.in);
             String account = scan.nextLine();
-            if ("1".equals(account) || "1".equals(account))
+            if ("1".equals(account) || "1".equals(account))// напевно треба видалити
                 if ("1".equals(account)) {
                     writerFile.add("Реєструєм логін та пароль");
                     Registration.createAccount();

@@ -23,7 +23,12 @@ public class ArrayFileUser {
         return result;
     }
 
-    public static ArrayList<String> loginString = new ArrayList<>();
+    public static ArrayList<String> loginString(){
+         ArrayList<String>login=new ArrayList<>();
+         for (User i :Main.arrayUser){
+             login.add(i.getLogin());
+         }return login;
+    }
 //
 //   public static void main(String[] args) {
 //

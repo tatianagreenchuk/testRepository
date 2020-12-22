@@ -109,7 +109,7 @@ public class Testing {
                 wrongAnswers++;
             }
             System.out.println();
-
+       // 10,gennadii,00000,6,7,8,gennadii,petrov,9-10-1985,genchik@gmail.com,ukraine,vinnytsia;
 
         }
         System.out.println("Кількість вірних відповідей: " + rightAnswers);

@@ -1,7 +1,5 @@
 package edu.lits;
 
-import edu.lits.model.ArrayFileUser;
-
 import static edu.lits.model.WriterFileUser.writerFile;
 
 public class LeaderBoard {
@@ -10,13 +8,11 @@ public class LeaderBoard {
                          System.out.println();
                     System.out.println("Наші лідери:\n");
                     writerFile.add("Вивели дошку лідерів");
-                    ArrayFileUser arFil = new ArrayFileUser();
-                    arFil.arraySort();
-                    for (String s : arFil.loginString){
-                        System.out.println(s);
+
+                    for (String s : Main.arrayLoginUser){
+                      System.out.println(s);
                     }
 
     }
-
 }
 

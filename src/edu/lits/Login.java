@@ -18,18 +18,14 @@ public class Login {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введіть свій логін: ");
         String login = scan.nextLine();
-        //arraySort();
-        ArrayList<String>loginString=new ArrayList<>();
-       for (User i:Main.arrayUser){
-           loginString.add(i.getLogin());
-       }
-        boolean userName=loginString.contains(login);
+
+        boolean userName=Main.arrayLoginUser.contains(login);
         if (userName){
             System.out.println("Введіть свій пароль: ");
             String password = scan.nextLine();
 
-            int n = loginString.indexOf(login);
-            boolean passwordUser = Main.arrayUser.get(n).getPassword().contains(password);
+            int n = Main.arrayLoginUser.indexOf(login);
+            boolean passwordUser = password.contains(Main.arrayUser.get(n).getPassword());
                 if (passwordUser){
                     Main main = new Main();
                     main.loginUser = login;
