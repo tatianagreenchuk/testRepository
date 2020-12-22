@@ -33,8 +33,8 @@ public class Testing {
     }
 
     static public void runUserTesting() {
-        ArrayList<Integer> rightAnswers = new ArrayList<>();
-        ArrayList<Integer> wrongAnswers = new ArrayList<>();
+        int rightAnswers =0;
+        int wrongAnswers = 0;
         Scanner scanner = new Scanner(System.in);
         Difficulty difficulty = null;
         boolean stayInLoop = true;
@@ -95,27 +95,27 @@ public class Testing {
                 System.out.println("_____________________ ");
                 System.out.println("Невірно. Правильна відповідь: " + rightAnswer.getText());
                 System.out.println();
-                wrongAnswers.add(1);
+                wrongAnswers++;
                 continue;
             }
 
             if (rightAnswer.getNumber() == userAnswer.getNumber()) {
                 System.out.println("_____________________ ");
                 System.out.println("Вірно!");
-                rightAnswers.add(1);
+                rightAnswers++;
             } else {
                 System.out.println("_____________________ ");
                 System.out.println("Невірно. Правильна відповідь: " + rightAnswer.getText());
-                wrongAnswers.add(1);
+                wrongAnswers++;
             }
             System.out.println();
 
 
         }
-        System.out.println("Кількість вірних відповідей: " + rightAnswers.size());
-        System.out.println("Кількість невірних відповідей: " + wrongAnswers.size());
+        System.out.println("Кількість вірних відповідей: " + rightAnswers);
+        System.out.println("Кількість невірних відповідей: " + wrongAnswers);
         System.out.println();
-        if (rightAnswers.size() < wrongAnswers.size()) {
+        if (rightAnswers< wrongAnswers) {
             System.out.println("Поганий результат. Спробуй ще раз!");
             System.out.println();
 
