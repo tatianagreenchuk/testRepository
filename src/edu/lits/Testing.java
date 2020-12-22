@@ -8,7 +8,6 @@ import edu.lits.model.*;
 import static edu.lits.model.WriterFileUser.writerFile;
 
 public class Testing {
-    static ArrayList<Integer> rightAnswers = new ArrayList<>();
 
     static void startTesting() {
         String menu = "";
@@ -34,6 +33,8 @@ public class Testing {
     }
 
     static public void runUserTesting() {
+        ArrayList<Integer> rightAnswers = new ArrayList<>();
+        ArrayList<Integer> wrongAnswers = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         Difficulty difficulty = null;
         boolean stayInLoop = true;
@@ -94,6 +95,7 @@ public class Testing {
                 System.out.println("_____________________ ");
                 System.out.println("Невірно. Правильна відповідь: " + rightAnswer.getText());
                 System.out.println();
+                wrongAnswers.add(1);
                 continue;
             }
 
@@ -104,13 +106,20 @@ public class Testing {
             } else {
                 System.out.println("_____________________ ");
                 System.out.println("Невірно. Правильна відповідь: " + rightAnswer.getText());
+                wrongAnswers.add(1);
             }
             System.out.println();
 
 
         }
         System.out.println("Кількість вірних відповідей: " + rightAnswers.size());
+        System.out.println("Кількість невірних відповідей: " + wrongAnswers.size());
+        System.out.println();
+        if (rightAnswers.size() < wrongAnswers.size()) {
+            System.out.println("Поганий результат. Спробуй ще раз!");
+            System.out.println();
 
+        }
 
     }
 }
