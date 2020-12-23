@@ -44,28 +44,29 @@ public class ArrayFileUser {
         ArrayList<User> idInt = new ArrayList<>();
         for (String s : arrayFile()) {
             User user = new User();//ось тут його обявляти тоді все норм
-            int x = s.indexOf(",");
-            int x2 = s.indexOf(",", s.indexOf(",", x + 1) + 1);
-            int x3 = s.indexOf(",", x2 + 1);
-            int x4 = s.indexOf(",", x3 + 1);
-            int x5 = s.indexOf(",", x4 + 1);
-            int x6 = s.indexOf(",", x5 + 1);
-            int x7 = s.indexOf(",", x6 + 1);
-            int x8 = s.indexOf(",", x7 + 1);
-            int x9 = s.indexOf(",", x8 + 1);
-            int x10 = s.indexOf(",", x9 + 1);
-            user.setId(Integer.parseInt(s.substring(0, x)));
-            user.setLogin(s.substring(x + 1, s.indexOf(",", x + 1)));
-            user.setPassword(s.substring(s.indexOf(",", x + 1) + 1, x2));
-            user.setEasyAnswerCount(Integer.parseInt(s.substring(x2 + 1, x3)));
-            user.setMiddleAnswerCount(Integer.parseInt(s.substring(x3 + 1, x4)));
-            user.setHardAnswerCount(Integer.parseInt(s.substring(x4 + 1, x5)));
-            user.setName(s.substring(x5 + 1, x6));
-            user.setSurname(s.substring(x6 + 1, x7));
-            user.setDateOfBirth(s.substring(x7 + 1, x8));
-            user.setEmail(s.substring(x8 + 1, x9));
-            user.setCountry(s.substring(x9 + 1, x10));
-            user.setCity(s.substring(x10 + 1, s.indexOf(";")));
+//            int x = s.indexOf(",");
+//            int x2 = s.indexOf(",", s.indexOf(",", x + 1) + 1);
+//            int x3 = s.indexOf(",", x2 + 1);
+//            int x4 = s.indexOf(",", x3 + 1);
+//            int x5 = s.indexOf(",", x4 + 1);
+//            int x6 = s.indexOf(",", x5 + 1);
+//            int x7 = s.indexOf(",", x6 + 1);
+//            int x8 = s.indexOf(",", x7 + 1);
+//            int x9 = s.indexOf(",", x8 + 1);
+//            int x10 = s.indexOf(",", x9 + 1);
+            String ss[]=s.split("\\|",12);
+            user.setId(Integer.parseInt(ss[0]));
+            user.setLogin(ss[1]);
+            user.setPassword(ss[2]);
+            user.setEasyAnswerCount(Integer.parseInt(ss[3]));
+            user.setMiddleAnswerCount(Integer.parseInt(ss[4]));
+            user.setHardAnswerCount(Integer.parseInt(ss[5]));
+            user.setName(ss[6]);
+            user.setSurname(ss[7]);
+            user.setDateOfBirth(ss[8]);
+            user.setEmail(ss[9]);
+            user.setCountry(ss[10]);
+            user.setCity(ss[11]);
 
             idInt.add(user);
 

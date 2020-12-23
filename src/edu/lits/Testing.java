@@ -1,10 +1,17 @@
 package edu.lits;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 import edu.lits.model.*;
 
+import static edu.lits.Main.arrayLoginUser;
+import static edu.lits.Main.arrayUser;
+import static edu.lits.model.WriterFileUser.writFileUserNewResult;
 import static edu.lits.model.WriterFileUser.writerFile;
 
 public class Testing {
@@ -52,14 +59,17 @@ public class Testing {
                 case "1":
                     difficulty = Difficulty.EASY;
                     stayInLoop = false;
+                    diffic=3;
                     break;
                 case "2":
                     difficulty = Difficulty.MIDDLE;
                     stayInLoop = false;
+                    diffic=4;
                     break;
                 case "3":
                     difficulty = Difficulty.HARD;
                     stayInLoop = false;
+                    diffic=5;
             }
         }
         System.out.println();
@@ -83,8 +93,8 @@ public class Testing {
                     userAnswer = j;
                 }
             }
-
-            if (rightAnswer == null) {
+//  це Вова пишу сюди, бо потім забуду де саме то місце яке мене мучить, і я його не можу зрозуміти
+            if (rightAnswer == null) { //не розумію навіщо цей if, ну наскільки я розумію він ніколи не спрацює
                 System.out.println("_____________________ ");
                 System.out.println("Нажаль автор запитання забув вказати правильну відповідь");
                 System.out.println();
@@ -103,15 +113,15 @@ public class Testing {
                 System.out.println("_____________________ ");
                 System.out.println("Вірно!");
                 rightAnswers++;
-            } else {
+            } else {  // і ця частина нібито ніколи не спрацюе томущо спрацьовує continue з попереднього if, і викине з циклу
                 System.out.println("_____________________ ");
                 System.out.println("Невірно. Правильна відповідь: " + rightAnswer.getText());
                 wrongAnswers++;
             }
             System.out.println();
-       // 10,gennadii,00000,6,7,8,gennadii,petrov,9-10-1985,genchik@gmail.com,ukraine,vinnytsia;
-
-        }
+               }
+        rightAns=rightAnswers;
+        enterCorrectAnswer();
         System.out.println("Кількість вірних відповідей: " + rightAnswers);
         System.out.println("Кількість невірних відповідей: " + wrongAnswers);
         System.out.println();
@@ -122,6 +132,32 @@ public class Testing {
         }
 
     }
+    public static int rightAns;
+    public static int diffic;
+    public static void enterCorrectAnswer() {
+        int index = arrayLoginUser.indexOf(Main.loginUser);
+        int elem;
+        switch (diffic) {
+            case 3:
+                elem = Main.arrayUser.get(index).getEasyAnswerCount();
+                elem = elem + rightAns;
+                Main.arrayUser.get(index).setEasyAnswerCount(elem);
+                break;
+            case 4:
+                elem = Main.arrayUser.get(index).getMiddleAnswerCount();
+                elem = elem + rightAns;
+                Main.arrayUser.get(index).setMiddleAnswerCount(elem);
+                break;
+            case 5:
+                elem = Main.arrayUser.get(index).getHardAnswerCount();
+                elem = elem + rightAns;
+                Main.arrayUser.get(index).setHardAnswerCount(elem);
+                break;
+        }
+        writFileUserNewResult();
+    }
 }
+
+
 
 
