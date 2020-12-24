@@ -5,6 +5,9 @@ public class Answer {
     private byte correct;
     private String text;
 
+    public Answer() {
+    }
+
     public Answer(String line) {
         String[] values = line.split("\\.", 3);
         number = Integer.parseInt(values[0]);
@@ -22,5 +25,17 @@ public class Answer {
 
     public String getText() {
         return text;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public void setCorrect(byte correct) {
+        this.correct = correct;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 }

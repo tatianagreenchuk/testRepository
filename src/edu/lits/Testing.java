@@ -30,9 +30,6 @@ public class Testing {
             switch (menu) {
                 case "1":
                     break;
-                case "2":
-                    stayInLoop = false;
-                    break;
                 default:
                     stayInLoop = false;
             }

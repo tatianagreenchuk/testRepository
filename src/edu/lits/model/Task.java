@@ -9,6 +9,9 @@ public class Task {
     private String text;
     public ArrayList<Answer> answerList;
 
+    public Task() {
+    }
+
     public Task(String line) {
         String[] values = line.split("\\.",4);
         author = values[0];
@@ -32,4 +35,21 @@ public class Task {
     public String getText() {
         return text;
     }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setLevel(Difficulty level) {
+        this.level = level;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
 }

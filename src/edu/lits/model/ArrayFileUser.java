@@ -95,7 +95,7 @@ public class ArrayFileUser {
                 taskList.add(task);
             }
         } catch (FileNotFoundException e) {
-            System.out.println("Файл task_list.txt не знайдено");
+            System.out.println("Файл не знайдено");
         }
         return taskList;
     }
