@@ -116,16 +116,17 @@ public class Testing {
                 wrongAnswers++;
             }
             System.out.println();
-               }
-        rightAns=rightAnswers;
-        enterCorrectAnswer();
-        System.out.println("Кількість вірних відповідей: " + rightAnswers);
-        System.out.println("Кількість невірних відповідей: " + wrongAnswers);
-        System.out.println();
-        if (rightAnswers< wrongAnswers) {
-            System.out.println("Поганий результат. Спробуй ще раз!");
-            System.out.println();
 
+            rightAns = rightAnswers;
+            enterCorrectAnswer();
+            System.out.println("Кількість вірних відповідей: " + rightAnswers);
+            System.out.println("Кількість невірних відповідей: " + wrongAnswers);
+            System.out.println();
+            if (rightAnswers < wrongAnswers) {
+                System.out.println("Поганий результат. Спробуй ще раз!");
+                System.out.println();
+
+            }
         }
 
     }

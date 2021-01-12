@@ -1,7 +1,7 @@
 1|markopyrizhok|33333|10|9|3|marko|pyrizhok|1-02-1987|marko@gmail.com|ukraine|chernivtsi
 2|vovanchikchig|11111|8|9|0|volodymyr|chizhik|2-03-1984|vovan@gmail.com|ukraine|chernivtsi
 3|serhiikond|22222|8|9|1|serhii|kondriuchok|3-04-1987|serhii@gmail.com|ukraine|chernivtsi
-4|nazar|44444|8|9|5|nazar|nazarchuk|4-05-2003|nazarrr@gmail.com|ukraine|chernivtsi
+4|nazar|44444|55|9|5|nazar|nazarchuk|4-05-2003|nazarrr@gmail.com|ukraine|chernivtsi
 5|tatianagreenchuk|55555|5|0|1|tatiana|greenchuk|10-11-1984|tatianagreen@gmail.com|ukraine|chernivtsi
 6|ivanivanovich|66666|1|0|0|ivan|ivanov|5-06-1990|ivaiva@gmail.com|ukraine|kyiv
 7|vasilii|77777|5|4|2|vasilii|tkach|6-07-1995|vassi@gmail.com|ukraine|rivne
