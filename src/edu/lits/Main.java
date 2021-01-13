@@ -14,14 +14,12 @@ import static edu.lits.model.WriterFileUser.writerFileUser;
 public class Main {
     public static final String FILE_USERS = "User.txt";
     public static final String TASK_FILE_NAME = "task_list.txt";
-    public static ArrayList<Task> taskList;
+    public static ArrayList<Task> taskList = ArrayFileUser.createTaskArrayList();
     public static String loginUser;
     public static ArrayList<User>arrayUser=ArrayFileUser.arraySort();
     public static ArrayList<String>arrayLoginUser=ArrayFileUser.loginString();
 
     public static void main(String[] args) {
-
-        taskList = ArrayFileUser.createTaskArrayList();
         writerFile.add("Розпочали роботу");
         start();
     }

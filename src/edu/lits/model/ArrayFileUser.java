@@ -78,19 +78,17 @@ public class ArrayFileUser {
         ArrayList<Task> taskList = new ArrayList<>();
         try (Scanner file = new Scanner(new File(Main.TASK_FILE_NAME))) {
             String line;
-            while (file.hasNext()) {
+            while (file.hasNextLine()) {
                 line = file.nextLine();
                 Task task = new Task(line);
                 task.answerList = new ArrayList<>();
-                line = file.nextLine();
-                while (!"".equals(line)) {
-                    Answer answer = new Answer(line);
-                    task.answerList.add(answer);
-                    if (file.hasNext()) {
-                        line = file.nextLine();
-                    } else {
+                while (file.hasNextLine()) {
+                    line = file.nextLine();
+                    if ("".equals(line)) {
                         break;
                     }
+                    Answer answer = new Answer(line);
+                    task.answerList.add(answer);
                 }
                 taskList.add(task);
             }

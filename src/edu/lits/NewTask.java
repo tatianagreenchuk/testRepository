@@ -165,11 +165,13 @@ public class NewTask {
             System.out.println("_____________________ ");
             System.out.println("Ви не вказали правильну відповідь");
             System.out.println();
+            return;
         }
         if (userAnswer == null) { //перевірка чи користувач не вказав номер відповіді якої немає в списку варіантів
             System.out.println("_____________________ ");
             System.out.println("Невірно. Правильна відповідь: " + rightAnswer.getText());
             System.out.println();
+            return;
         }
         if (rightAnswer.getNumber() == userAnswer.getNumber()) { //перевірка чи користувач дав правильну відповідь
             System.out.println("_____________________ ");
