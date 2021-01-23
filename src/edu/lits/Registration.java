@@ -1,7 +1,10 @@
 package edu.lits;
 
+import edu.lits.model.User;
+
 import java.util.Scanner;
 
+import static edu.lits.model.WriterFileUser.writFileUserNewResult;
 import static edu.lits.model.WriterFileUser.writerFile;
 
 public class Registration {
@@ -99,31 +102,62 @@ public class Registration {
             }
             break;
         }
-
+        ///////////////////////////////////////////////////
+        newUser(login, passwordRepeat, email);
+////////////////////////////////////////////////////////
         writerFile.add("login: " + login + ", password: " + password);
     }
+
+    private static void newUser(String login, String passwordRepeat, String email) {
+        //        private int easyAnswerCount;
+//        private int middleAnswerCount;
+//        private int hardAnswerCount;
+        User user = new User();
+        user.setId(Main.arrayUser.size()+1);
+        user.setLogin(login);
+        user.setPassword(passwordRepeat);
+        user.setEmail(email);
+        user.setName(name);
+        user.setSurname(surname);
+        user.setDateOfBirth(dateOfBirth);
+        user.setCountry(country);
+        user.setCity(city);
+        Main.arrayUser.add(user);
+        writFileUserNewResult();
+        name=null;
+        surname=null;
+        dateOfBirth=null;
+        country=null;
+        city=null;
+    }
+
+    private static String name;
+    private static String surname;
+    private static String dateOfBirth;
+    private static String country;
+    private static String city;
 
     static void enterAdditionalInfo() {
         Scanner textInput = new Scanner(System.in);
 
         System.out.println();
         System.out.print(NAME);
-        String name = textInput.nextLine();
+         name = textInput.nextLine();
 
         System.out.println();
         System.out.print(SURNAME);
-        String surname = textInput.nextLine();
+        surname = textInput.nextLine();
 
         System.out.println();
         System.out.print(DATE_OF_BIRTH);
-        String dateOfBirth = textInput.nextLine();
+        dateOfBirth = textInput.nextLine();
 
         System.out.println();
         System.out.print(COUNTRY);
-        String country = textInput.nextLine();
+        country = textInput.nextLine();
 
         System.out.println();
         System.out.print(CITY);
-        String city = textInput.nextLine();
+        city = textInput.nextLine();
     }
 }
