@@ -102,18 +102,15 @@ public class Registration {
             }
             break;
         }
-        ///////////////////////////////////////////////////
         newUser(login, passwordRepeat, email);
-////////////////////////////////////////////////////////
         writerFile.add("login: " + login + ", password: " + password);
     }
 
+    //    створюєм нового юзера
     private static void newUser(String login, String passwordRepeat, String email) {
-        //        private int easyAnswerCount;
-//        private int middleAnswerCount;
-//        private int hardAnswerCount;
+
         User user = new User();
-        user.setId(Main.arrayUser.size()+1);
+        user.setId(Main.arrayUser.size() + 1);
         user.setLogin(login);
         user.setPassword(passwordRepeat);
         user.setEmail(email);
@@ -124,13 +121,13 @@ public class Registration {
         user.setCity(city);
         Main.arrayUser.add(user);
         writFileUserNewResult();
-        name=null;
-        surname=null;
-        dateOfBirth=null;
-        country=null;
-        city=null;
+        name = null;
+        surname = null;
+        dateOfBirth = null;
+        country = null;
+        city = null;
     }
-
+// виніс змінні в поля
     private static String name;
     private static String surname;
     private static String dateOfBirth;
@@ -142,7 +139,7 @@ public class Registration {
 
         System.out.println();
         System.out.print(NAME);
-         name = textInput.nextLine();
+        name = textInput.nextLine();
 
         System.out.println();
         System.out.print(SURNAME);
