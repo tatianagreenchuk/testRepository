@@ -1,38 +1,38 @@
 package edu.lits;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 import edu.lits.model.*;
 
 import static edu.lits.Main.arrayLoginUser;
-import static edu.lits.Main.arrayUser;
 import static edu.lits.model.WriterFileUser.writFileUserNewResult;
 import static edu.lits.model.WriterFileUser.writerFile;
 
 public class Testing {
 
     static void startTesting() {
-        String menu = "";
-        boolean stayInLoop = true;
-        while (stayInLoop) {
+
+        runUserTesting();
+
+        String menu;
+        while (true) {
             writerFile.add("запускаємо тестування");
-            runUserTesting();
+            System.out.println();
             System.out.println("1 - Пройти нове тестування");
             System.out.println("2 - Повернутися до головного меню");
-            System.out.print("виберіть опцію: ");
+            System.out.print("> ");
             Scanner sc = new Scanner(System.in);
             menu = sc.nextLine();
             switch (menu) {
                 case "1":
+                    runUserTesting();
+                    continue;
+                case "2":
                     break;
                 default:
-                    stayInLoop = false;
+                    continue;
             }
+            break;
         }
     }
 
@@ -48,7 +48,7 @@ public class Testing {
             System.out.println("1 - простий");
             System.out.println("2 - середній");
             System.out.println("3 - складний");
-            System.out.print("виберіть опцію: ");
+            System.out.print("> ");
 
             String option = scanner.nextLine();
 
@@ -83,15 +83,19 @@ public class Testing {
                     rightAnswer = j;
                 }
             }
-            System.out.print("виберіть відповідь: ");
+            System.out.print("Ваша відповідь: ");
             String option = scanner.nextLine();
             for (Answer j : i.answerList) {
-                if (j.getNumber() == Integer.parseInt(option)) {
-                    userAnswer = j;
+                try {
+                    if (j.getNumber() == Integer.parseInt(option)) {
+                        userAnswer = j;
+                    }
+                } catch (NumberFormatException e) {
+                    userAnswer = null;
                 }
             }
-//  це Вова пишу сюди, бо потім забуду де саме то місце яке мене мучить, і я його не можу зрозуміти
-            if (rightAnswer == null) { //не розумію навіщо цей if, ну наскільки я розумію він ніколи не спрацює
+
+            if (rightAnswer == null) {
                 System.out.println("_____________________ ");
                 System.out.println("Нажаль автор запитання забув вказати правильну відповідь");
                 System.out.println();
@@ -110,26 +114,24 @@ public class Testing {
                 System.out.println("_____________________ ");
                 System.out.println("Вірно!");
                 rightAnswers++;
-            } else {  // і ця частина нібито ніколи не спрацюе томущо спрацьовує continue з попереднього if, і викине з циклу
+            } else {
                 System.out.println("_____________________ ");
                 System.out.println("Невірно. Правильна відповідь: " + rightAnswer.getText());
                 wrongAnswers++;
             }
             System.out.println();
-
-            rightAns = rightAnswers;
-            enterCorrectAnswer();
-            System.out.println("Кількість вірних відповідей: " + rightAnswers);
-            System.out.println("Кількість невірних відповідей: " + wrongAnswers);
-            System.out.println();
-            if (rightAnswers < wrongAnswers) {
-                System.out.println("Поганий результат. Спробуй ще раз!");
-                System.out.println();
-
-            }
         }
 
+        rightAns = rightAnswers;
+        enterCorrectAnswer();
+        System.out.println("Кількість вірних відповідей: " + rightAnswers);
+        System.out.println("Кількість невірних відповідей: " + wrongAnswers);
+        System.out.println();
+        if (rightAnswers < wrongAnswers) {
+            System.out.println("Поганий результат. Спробуй ще раз!");
+        }
     }
+
     public static int rightAns;
     public static int diffic;
     public static void enterCorrectAnswer() {

@@ -1,5 +1,6 @@
 package edu.lits;
 
+import edu.lits.model.ArrayFileUser;
 import edu.lits.model.User;
 
 import java.util.Scanner;
@@ -37,7 +38,7 @@ public class Registration {
             if (Main.arrayLoginUser.contains(login)) {
                 System.out.println();
                 System.out.println("Такий логін вже існує.\n" +
-                        "Спробуйте увійти в свій обліковий запис");
+                        "Введіть інший логін");
                 writerFile.add("Такий логін вже існує,Починаємо з початку");
                 continue;
             }
@@ -103,6 +104,11 @@ public class Registration {
             break;
         }
         newUser(login, passwordRepeat, email);
+        Main.loginUser = login;
+        Main.arrayUser.clear();
+        Main.arrayUser = ArrayFileUser.arraySort();
+        Main.arrayLoginUser.clear();
+        Main.arrayLoginUser = ArrayFileUser.loginString();
         writerFile.add("login: " + login + ", password: " + password);
     }
 

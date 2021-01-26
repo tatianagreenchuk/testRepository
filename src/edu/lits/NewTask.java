@@ -18,22 +18,27 @@ public class NewTask {
     }
 
     public static void createNewTask() {
-        boolean stayInLoop = true;
-        while (stayInLoop) {
+
+        createTask();
+
+        while (true) {
             writerFile.add("Створюємо завдання");
-            createTask();
             System.out.println();
             System.out.println("1 - Створити нове завдання");
             System.out.println("2 - Повернутися до головного меню");
-            System.out.print("Оберіть опцію: ");
+            System.out.print("> ");
             Scanner n1 = new Scanner(System.in);
             String menu = n1.nextLine();
             switch (menu) {
                 case "1":
+                    createTask();
+                    continue;
+                case "2":
                     break;
                 default:
-                    stayInLoop = false;
+                    continue;
             }
+            break;
         }
     }
 
@@ -49,7 +54,7 @@ public class NewTask {
             System.out.println("1 - простий");
             System.out.println("2 - середній");
             System.out.println("3 - складний");
-            System.out.print("виберіть опцію: ");
+            System.out.print("> ");
             String option = scanner.nextLine();
             switch (option) {
                 case "1":
@@ -102,7 +107,7 @@ public class NewTask {
         System.out.print("> ");
         newTask.answerList = new ArrayList<>();
         String answerLine = scanner.nextLine();
-        String[] answerArray = answerLine.split("\\/");
+        String[] answerArray = answerLine.split("/");
         for (int i = 0 ; i < answerArray.length ; i++) {
             Answer answer = new Answer(); //створюємо новий об'єкт answer
             answer.setNumber(i+1); //заповнюємо поле номера відповіді
@@ -122,7 +127,7 @@ public class NewTask {
             System.out.println("2 - редагувати завдання");
             System.out.println("3 - зберегти завдання");
             System.out.println("4 - не зберігати завдання");
-            System.out.print("виберіть опцію: ");
+            System.out.print("> ");
             String option = scanner.nextLine();
             switch (option) {
                 case "1":
@@ -153,12 +158,16 @@ public class NewTask {
                 rightAnswer = i;
             }
         }
-        System.out.print("виберіть відповідь: "); //заносимо відповідь корисувача в змінну userAnswer
+        System.out.print("Ваша відповідь: "); //заносимо відповідь корисувача в змінну userAnswer
         Scanner scanner = new Scanner(System.in);
         String option = scanner.nextLine();
         for (Answer i : newTask.answerList) {
-            if (i.getNumber() == Integer.parseInt(option)) {
-                userAnswer = i;
+            try {
+                if (i.getNumber() == Integer.parseInt(option)) {
+                    userAnswer = i;
+                }
+            } catch (NumberFormatException e) {
+                userAnswer = null;
             }
         }
         if (rightAnswer == null) { //перевірка чи користувач не забув вказати який із варіантів відповідей правильний
@@ -195,7 +204,7 @@ public class NewTask {
         String newAnswerLine = scanner.nextLine();
         newTask.setText(newTaskLine); //заповнюємо поле тексту запитання
         newTask.answerList.clear(); //заповнюємо поле варіантів відповідей
-        String[] answerArray = newAnswerLine.split("\\/");
+        String[] answerArray = newAnswerLine.split("/");
         for (int i = 0 ; i < answerArray.length ; i++) {
             Answer answer = new Answer(); //створюємо новий об'єкт answer
             answer.setNumber(i+1); //заповнюємо поле номера відповіді

@@ -14,9 +14,10 @@ public class LeaderBoard {
         System.out.println("Наші лідери:\n");
         writerFile.add("Вивели дошку лідерів");
         showEasyDifficulty();
+        System.out.println();
         showMiddleDifficulty();
+        System.out.println();
         showHardDifficulty();
-
     }
 
     public static void showEasyDifficulty() {

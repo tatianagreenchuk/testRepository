@@ -28,24 +28,23 @@ public class Main {
         String menu = "";
         while (!"3".equals(menu)) {
             System.out.println();
-            System.out.println("< Авторизація >\n" +
+            System.out.print("< Авторизація >\n" +
                     "1 - Створити новий обліковий запис\n" +
                     "2 - Увійти\n" +
                     "3 - Завершити роботу\n" +
-                    "Оберіть опцію: ");
+                    "> ");
             Scanner scan = new Scanner(System.in);
             String account = scan.nextLine();
-            if ("1".equals(account) || "1".equals(account))// напевно треба видалити
-                if ("1".equals(account)) {
-                    writerFile.add("Реєструєм логін та пароль");
-                    Registration.createAccount();
-                    writerFile.add("Успішно зареєструвалися, переходим до навігації");
-                    startNavigation();
-                }
+            if ("1".equals(account)) {
+                writerFile.add("Реєструєм логін та пароль");
+                Registration.createAccount();
+                writerFile.add("Успішно зареєструвалися, переходим до навігації");
+                startNavigation();
+            }
             if ("2".equals(account)) {
                 writerFile.add("Перквіряєм логін та пароль");
                 Login.startLogin();
-                writerFile.add("Успішно залогінелись, переходим в навігацію");
+                writerFile.add("Авторизація пройшла успішно, переходимо в навігацію");
                 startNavigation();
             }
             if ("3".equals(account)) {
